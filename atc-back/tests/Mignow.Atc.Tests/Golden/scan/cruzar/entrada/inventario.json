@@ -1,0 +1,15 @@
+{
+ "sid": "TST",
+ "mandante": "100",
+ "escopo": 5,
+ "por_tipo": {
+  "CLAS": 1,
+  "FUGR": 1,
+  "PROG": 3
+ },
+ "excluidos": {
+  "tmp": 2,
+  "marcados_exclusao": 1,
+  "gerados": 0
+ }
+}

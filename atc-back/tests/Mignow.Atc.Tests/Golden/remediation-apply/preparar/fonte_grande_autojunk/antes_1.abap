@@ -1,0 +1,1 @@
+SELECT * FROM konv INTO TABLE lt_k.

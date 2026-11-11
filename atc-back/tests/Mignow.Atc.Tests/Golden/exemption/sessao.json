@@ -1,0 +1,130 @@
+{
+ "itens": [
+  {
+   "n": 1,
+   "objeto": "ZACIC",
+   "tipo": "PROG",
+   "ref": "BAPI_SALESORDER_CREATEFROMDAT2",
+   "msg": "Call of BAPI",
+   "check": "CL_CI_TEST_X",
+   "status": "Isenção",
+   "obs": "Triagem R5: BAPI ja corrigida",
+   "finding_id": "atc:AAA,1,  X",
+   "prioridade": "1"
+  },
+  {
+   "n": 2,
+   "objeto": "ZACIC",
+   "tipo": "PROG",
+   "ref": "BAPI_SALESORDER_CREATEFROMDAT2",
+   "msg": "BAPI multi",
+   "check": "CL_CI_TEST_X",
+   "status": "Isenção",
+   "obs": "Triagem R5: dois findings",
+   "prioridade": "1"
+  },
+  {
+   "n": 3,
+   "objeto": "ZSYN",
+   "tipo": "PROG",
+   "ref": "",
+   "msg": "Syntax error in program",
+   "check": "CL_CI_TEST_X",
+   "status": "Isenção",
+   "obs": "",
+   "finding_id": "atc:BBB,2,  X",
+   "prioridade": "1"
+  },
+  {
+   "n": 4,
+   "objeto": "ZQRY",
+   "tipo": "AQSG",
+   "ref": "",
+   "msg": "SAP Query check",
+   "check": "CL_CI_TEST_SAP_QUERY_S4H_READY",
+   "status": "Isenção",
+   "obs": "",
+   "finding_id": "atc:CCC,3,  X",
+   "prioridade": "2"
+  },
+  {
+   "n": 5,
+   "objeto": "ZOLD",
+   "tipo": "PROG",
+   "ref": "KONV",
+   "msg": "Table KONV",
+   "check": "CL_CI_TEST_X",
+   "status": "Isenção",
+   "obs": "",
+   "finding_id": "atc:DDD,4,  X",
+   "prioridade": "3"
+  },
+  {
+   "n": 6,
+   "objeto": "ZJA",
+   "tipo": "PROG",
+   "ref": "VBUK",
+   "msg": "Isento na extracao",
+   "check": "CL_CI_TEST_X",
+   "status": "Isenção",
+   "obs": "",
+   "finding_id": "atc:EEE,5,  X",
+   "prioridade": "1"
+  },
+  {
+   "n": 7,
+   "objeto": "ZPED",
+   "tipo": "PROG",
+   "ref": "VBUP",
+   "msg": "Ja pedido",
+   "check": "CL_CI_TEST_X",
+   "status": "Isenção",
+   "obs": "",
+   "finding_id": "atc:FFF,6,  X",
+   "prioridade": "1"
+  },
+  {
+   "n": 8,
+   "objeto": "ZNOLINK",
+   "tipo": "PROG",
+   "ref": "MARA",
+   "msg": "Sem vinculo",
+   "check": "CL_CI_TEST_X",
+   "status": "Isenção",
+   "obs": "",
+   "prioridade": "1"
+  },
+  {
+   "n": 9,
+   "objeto": "ZOLDOBS",
+   "tipo": "PROG",
+   "ref": "KONV",
+   "msg": "Antigo",
+   "check": "CL_CI_TEST_X",
+   "status": "Confirmado KB",
+   "obs": "solicitar isenção ATC",
+   "prioridade": "1"
+  },
+  {
+   "n": 10,
+   "objeto": "ZAMB",
+   "tipo": "PROG",
+   "ref": "BSEG",
+   "msg": "Sem prioridade",
+   "check": "CL_CI_TEST_X",
+   "status": "Isenção",
+   "obs": "",
+   "finding_id": "atc:GGG,7,  X"
+  },
+  {
+   "n": 11,
+   "objeto": "ZCORR",
+   "tipo": "PROG",
+   "ref": "KONV",
+   "msg": "Corrigido",
+   "check": "CL_CI_TEST_X",
+   "status": "Confirmado KB",
+   "obs": "ok"
+  }
+ ]
+}

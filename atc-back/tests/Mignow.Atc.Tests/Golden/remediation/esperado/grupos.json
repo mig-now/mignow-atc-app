@@ -1,0 +1,226 @@
+{
+ "pendentes": 14,
+ "lote": 40,
+ "objetos_no_lote": 14,
+ "itens_no_lote": 14,
+ "grupos": [
+  {
+   "ref": "KONV",
+   "robt": "TABL",
+   "forma_chamada": "SQL",
+   "itens": [
+    1,
+    14
+   ],
+   "objetos": [
+    "PROG ZPROG_A",
+    "PROG ZPROG_K"
+   ],
+   "kb_top": {
+    "id": "KONV-001",
+    "ocorrencias": 5,
+    "alertas": []
+   },
+   "kb_solucoes": 1,
+   "complexidade": "simples",
+   "standard": false,
+   "modelo_sugerido": "haiku"
+  },
+  {
+   "ref": "VBUK",
+   "robt": "TABL",
+   "forma_chamada": "uso_nao_localizado",
+   "itens": [
+    2
+   ],
+   "objetos": [
+    "PROG ZPROG_B"
+   ],
+   "kb_top": null,
+   "kb_solucoes": 0,
+   "complexidade": "media",
+   "standard": false,
+   "modelo_sugerido": "sonnet"
+  },
+  {
+   "ref": "MKPF",
+   "robt": "TABL",
+   "forma_chamada": "uso_nao_localizado",
+   "itens": [
+    3
+   ],
+   "objetos": [
+    "PROG ZPROG_C"
+   ],
+   "kb_top": null,
+   "kb_solucoes": 0,
+   "complexidade": "media",
+   "standard": false,
+   "modelo_sugerido": "sonnet"
+  },
+  {
+   "ref": "ME53",
+   "robt": "TRAN",
+   "forma_chamada": "CALL TRANSACTION USING (BDC)",
+   "itens": [
+    4
+   ],
+   "objetos": [
+    "PROG ZPROG_D"
+   ],
+   "kb_top": null,
+   "kb_solucoes": 0,
+   "complexidade": "complexa",
+   "standard": false,
+   "modelo_sugerido": "principal"
+  },
+  {
+   "ref": "BAPI_MATERIAL_SAVEDATA",
+   "robt": "FUNC",
+   "forma_chamada": "CALL FUNCTION",
+   "itens": [
+    5
+   ],
+   "objetos": [
+    "PROG ZPROG_E"
+   ],
+   "kb_top": null,
+   "kb_solucoes": 0,
+   "complexidade": "complexa",
+   "standard": false,
+   "modelo_sugerido": "principal"
+  },
+  {
+   "ref": "BSEG",
+   "robt": "TABL",
+   "forma_chamada": "SQL",
+   "itens": [
+    7
+   ],
+   "objetos": [
+    "PROG ZPROG_F"
+   ],
+   "kb_top": null,
+   "kb_solucoes": 0,
+   "complexidade": "complexa",
+   "standard": false,
+   "modelo_sugerido": "principal"
+  },
+  {
+   "ref": "VBAK",
+   "robt": "TABL",
+   "forma_chamada": "outro",
+   "itens": [
+    8
+   ],
+   "objetos": [
+    "PROG ZPROG_G"
+   ],
+   "kb_top": null,
+   "kb_solucoes": 0,
+   "complexidade": "complexa",
+   "standard": false,
+   "modelo_sugerido": "principal"
+  },
+  {
+   "ref": "MARA",
+   "robt": "TABL",
+   "forma_chamada": "sem_fonte",
+   "itens": [
+    9
+   ],
+   "objetos": [
+    "TABL ZTABLE_H"
+   ],
+   "kb_top": null,
+   "kb_solucoes": 0,
+   "complexidade": "complexa",
+   "standard": false,
+   "modelo_sugerido": "principal"
+  },
+  {
+   "ref": "KNA1",
+   "robt": "TABL",
+   "forma_chamada": "sem_fonte",
+   "itens": [
+    10
+   ],
+   "objetos": [
+    "PROG ZGFSCM_MIG_CREDITO"
+   ],
+   "kb_top": null,
+   "kb_solucoes": 0,
+   "complexidade": "complexa",
+   "standard": false,
+   "modelo_sugerido": "principal"
+  },
+  {
+   "ref": "KNKK",
+   "robt": "TABL",
+   "forma_chamada": "SQL",
+   "itens": [
+    11
+   ],
+   "objetos": [
+    "PROG ZPROG_I"
+   ],
+   "kb_top": null,
+   "kb_solucoes": 0,
+   "complexidade": "complexa",
+   "standard": false,
+   "modelo_sugerido": "principal"
+  },
+  {
+   "ref": "ZFM_X",
+   "robt": "FUNC",
+   "forma_chamada": "CALL FUNCTION",
+   "itens": [
+    13
+   ],
+   "objetos": [
+    "PROG ZPROG_J"
+   ],
+   "kb_top": null,
+   "kb_solucoes": 0,
+   "complexidade": "complexa",
+   "standard": false,
+   "modelo_sugerido": "principal"
+  },
+  {
+   "ref": "MARD",
+   "robt": "TABL",
+   "forma_chamada": "SQL",
+   "itens": [
+    15
+   ],
+   "objetos": [
+    "PROG ZPROG_L"
+   ],
+   "kb_top": null,
+   "kb_solucoes": 0,
+   "complexidade": "complexa",
+   "standard": false,
+   "modelo_sugerido": "principal"
+  },
+  {
+   "ref": "KONV",
+   "robt": "TABL",
+   "forma_chamada": "sem_fonte",
+   "itens": [
+    6
+   ],
+   "objetos": [
+    "PROG SAPMV45A"
+   ],
+   "kb_top": {
+    "id": "KONV-001",
+    "ocorrencias": 5,
+    "alertas": []
+   },
+   "kb_solucoes": 1,
+   "complexidade": "complexa",
+   "standard": true,
+   "modelo_sugerido": "principal"
+  }
+ ]
+}

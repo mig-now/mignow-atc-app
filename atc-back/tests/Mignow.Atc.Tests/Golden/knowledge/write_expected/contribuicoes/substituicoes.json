@@ -1,0 +1,20 @@
+{
+ "S1": {
+  "por": "C-BAPI_TESTE-002",
+  "elemento": "BAPI_TESTE",
+  "data": "{{DATE}}",
+  "motivo": ""
+ },
+ "S00001": {
+  "por": "C-BAPI_TESTE-001",
+  "elemento": "BAPI_TESTE",
+  "data": "{{DATE}}",
+  "motivo": "Motivo \"ç\""
+ },
+ "S00002": {
+  "por": "C-BAPI_TESTE-001",
+  "elemento": "BAPI_TESTE",
+  "data": "{{DATE}}",
+  "motivo": "Motivo \"ç\""
+ }
+}

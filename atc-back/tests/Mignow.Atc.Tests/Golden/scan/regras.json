@@ -1,0 +1,658 @@
+{
+ "versao": "1.0",
+ "data": "2026-10-27",
+ "notas": [
+  "origem.pcre = texto literal do ABAP do cliente (linha a linha); usado so na comparacao original x refinada.",
+  "refinada.* = refinamento IA aprovado pelo consultor em 23.10.2026 (busca por sentenca do SCAN ABAP-SOURCE, sem comentarios; refinamentos em roadmap/atc-extracao-mignow.md).",
+  "refinada.texto: L = sentenca com literais (nomes de funcao/transacao vem entre aspas); C = sentenca com o conteudo dos literais trocado por ''.",
+  "refinada.pcre roda sobre a sentenca em maiusculas; grupo 1 = elemento (Referenced Object) quando elemento_fixo vazio.",
+  "refinada.exige: a sentenca tambem precisa conter este PCRE; sem ele a ocorrencia vira 'informativo' (fora do CSV).",
+  "refinada.suprimida_por: se a regra indicada achar o mesmo elemento na mesma sentenca, esta nao conta (evita contar duas vezes).",
+  "robt e elemento_fixo = definicao MIGNOW para o layout da atc-remediacao (RObT/Referenced Object). REGEX_003: ALPHA = IN aplica a conversao ALPHA de entrada, por isso usa CONVERSION_EXIT_ALPHA_INPUT. REGEX_031/032: o campo e CUOBJ, a tabela fica como Referenced Object.",
+  "prioridade = 1 em todas (definicao do consultor, 27.10.2026).",
+  "gatilho = pre-filtro: fonte sem nenhum destes termos nao e analisado (deve conter um termo de cada regra ativa)."
+ ],
+ "gatilho": "(?i)VBUK|VBUP|KONV|ALPHA|XK\\d\\d|XD\\d\\d|BAPI_OBJCL_|BAPI_PO_GETDETAIL|KNKK|CKML|MLHD|MLIT|MLPP|MLCR|CLAF_CLASSIFICATION_OF_OBJECTS|MLMST|VAKEY|BAPI_MATERIAL_|BAPI_STANDARDMATERIAL_CREATE|BAPI_REQUISITION_|BAPI_SALESORDER_CREATEFROMDAT1|AFKO|CAUFV",
+ "regras": [
+  {
+   "id": "REGEX_001",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TABELA",
+   "severidade": "ALTO",
+   "descricao": "Acesso direto a VBUP/VBUK (status de item/cabecalho de remessa) - validar CDS Views/BAPIs equivalentes no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(FROM|JOIN)[[:space:]]+(VBUP|VBUK)([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?([[:space:]]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:FROM|JOIN)\\s+\\(*\\s*(VBUK|VBUP)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_002",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TABELA",
+   "severidade": "ALTO",
+   "descricao": "Acesso direto a KONV - substituida por PRCD_ELEMENTS no S/4HANA (Simplification Item de Precos)",
+   "origem": {
+    "pcre": "(?i).*(FROM|JOIN)[[:space:]]+KONV([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?([[:space:]]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:FROM|JOIN)\\s+\\(*\\s*(KONV)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_003",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "CONVERSION_EXIT",
+   "severidade": "MEDIO",
+   "descricao": "Uso do parametro ALPHA = IN em conversao de numero de material - revisar apos ampliacao do MATNR (40 posicoes)",
+   "origem": {
+    "pcre": "(?i).*ALPHA[[:space:]]*=[[:space:]]*IN.*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\bALPHA\\s*=\\s*IN\\b",
+    "texto": "L",
+    "elemento_fixo": "CONVERSION_EXIT_ALPHA_INPUT",
+    "exige": "MATNR",
+    "suprimida_por": ""
+   },
+   "robt": "FUNC"
+  },
+  {
+   "id": "REGEX_004",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "CONVERSION_EXIT",
+   "severidade": "MEDIO",
+   "descricao": "Chamada a CONVERSION_EXIT_ALPHA_INPUT - revisar junto com a extensao do campo MATNR no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*CONVERSION_EXIT_ALPHA_INPUT([[:space:]]|['\"(]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(CONVERSION_EXIT_ALPHA_INPUT)\\b",
+    "texto": "L",
+    "elemento_fixo": "",
+    "exige": "MATNR",
+    "suprimida_por": ""
+   },
+   "robt": "FUNC"
+  },
+  {
+   "id": "REGEX_005",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TRANSACTION",
+   "severidade": "ALTO",
+   "descricao": "Uso de transacao XK* (mestre de fornecedor) - substituida pela transacao BP no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(CALL[[:space:]]+TRANSACTION|TRANSACTION|T-CODE)[[:space:]]*['\"]?XK[0-9]{2}.*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:CALL|LEAVE\\s+TO)\\s+TRANSACTION\\s+'(XK\\d\\d)'",
+    "texto": "L",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TRAN"
+  },
+  {
+   "id": "REGEX_006",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TRANSACTION",
+   "severidade": "ALTO",
+   "descricao": "Referencia literal a codigo de transacao XK## - substituida pela transacao BP no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*'XK[0-9]{2}'.*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "'(XK\\d\\d)'",
+    "texto": "L",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": "REGEX_005"
+   },
+   "robt": "TRAN"
+  },
+  {
+   "id": "REGEX_007",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TRANSACTION",
+   "severidade": "ALTO",
+   "descricao": "Referencia literal a codigo de transacao XD## (mestre de cliente) - substituida pela transacao BP no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*'XD[0-9]{2}'.*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "'(XD\\d\\d)'",
+    "texto": "L",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": "REGEX_008"
+   },
+   "robt": "TRAN"
+  },
+  {
+   "id": "REGEX_008",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TRANSACTION",
+   "severidade": "ALTO",
+   "descricao": "Uso de transacao XD* (mestre de cliente) - substituida pela transacao BP no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(CALL[[:space:]]+TRANSACTION|TRANSACTION|T-CODE)[[:space:]]*['\"]?XD[0-9]{2}.*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:CALL|LEAVE\\s+TO)\\s+TRANSACTION\\s+'(XD\\d\\d)'",
+    "texto": "L",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TRAN"
+  },
+  {
+   "id": "REGEX_009",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "BAPI",
+   "severidade": "MEDIO",
+   "descricao": "Chamada a BAPI_OBJCL_GETDETAIL (classificacao) - validar compatibilidade no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*BAPI_OBJCL_GETDETAIL([[:space:]]|['\"(]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(BAPI_OBJCL_GETDETAIL)\\b",
+    "texto": "L",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "FUNC"
+  },
+  {
+   "id": "REGEX_010",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "BAPI",
+   "severidade": "MEDIO",
+   "descricao": "Chamada a BAPI_OBJCL_CREATE (classificacao) - validar compatibilidade no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*BAPI_OBJCL_CREATE([[:space:]]|['\"(]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(BAPI_OBJCL_CREATE)\\b",
+    "texto": "L",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "FUNC"
+  },
+  {
+   "id": "REGEX_011",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "BAPI",
+   "severidade": "MEDIO",
+   "descricao": "Chamada a BAPI_OBJCL_CHANGE (classificacao) - validar compatibilidade no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*BAPI_OBJCL_CHANGE([[:space:]]|['\"(]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(BAPI_OBJCL_CHANGE)\\b",
+    "texto": "L",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "FUNC"
+  },
+  {
+   "id": "REGEX_012",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "BAPI",
+   "severidade": "MEDIO",
+   "descricao": "Chamada a BAPI_PO_GETDETAIL (pedido de compra) - validar compatibilidade no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*BAPI_PO_GETDETAIL([[:space:]]|['\"(]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(BAPI_PO_GETDETAIL)\\b",
+    "texto": "L",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "FUNC"
+  },
+  {
+   "id": "REGEX_013",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TABELA",
+   "severidade": "ALTO",
+   "descricao": "Acesso direto a KNKK (controle de credito) - gestao de credito migrada para FSCM/Credit Management no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(FROM|JOIN)[[:space:]]+KNKK([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?([[:space:]]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:FROM|JOIN)\\s+\\(*\\s*(KNKK)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_014",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TABELA",
+   "severidade": "ALTO",
+   "descricao": "Acesso direto a CKMLPP - revisar Material Ledger (obrigatorio ativo) no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(FROM|JOIN)[[:space:]]+CKMLPP([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?([[:space:]]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:FROM|JOIN)\\s+\\(*\\s*(CKMLPP)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_015",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TABELA",
+   "severidade": "ALTO",
+   "descricao": "Acesso direto a CKMLCR - revisar Material Ledger (obrigatorio ativo) no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(FROM|JOIN)[[:space:]]+CKMLCR([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?([[:space:]]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:FROM|JOIN)\\s+\\(*\\s*(CKMLCR)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_016",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TABELA",
+   "severidade": "ALTO",
+   "descricao": "Acesso direto a MLHD (cabecalho de documento do Material Ledger) - revisar no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(FROM|JOIN)[[:space:]]+MLHD([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?([[:space:]]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:FROM|JOIN)\\s+\\(*\\s*(MLHD)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_017",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TABELA",
+   "severidade": "ALTO",
+   "descricao": "Acesso direto a MLIT (itens de documento do Material Ledger) - revisar no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(FROM|JOIN)[[:space:]]+MLIT([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?([[:space:]]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:FROM|JOIN)\\s+\\(*\\s*(MLIT)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_018",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TABELA",
+   "severidade": "ALTO",
+   "descricao": "Acesso direto a MLPP (periodo do Material Ledger) - revisar no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(FROM|JOIN)[[:space:]]+MLPP([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?([[:space:]]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:FROM|JOIN)\\s+\\(*\\s*(MLPP)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_019",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TABELA",
+   "severidade": "ALTO",
+   "descricao": "Acesso direto a MLPPF - revisar Material Ledger no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(FROM|JOIN)[[:space:]]+MLPPF([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?([[:space:]]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:FROM|JOIN)\\s+\\(*\\s*(MLPPF)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_020",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TABELA",
+   "severidade": "ALTO",
+   "descricao": "Acesso direto a MLCR (moedas/avaliacoes do Material Ledger) - revisar no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(FROM|JOIN)[[:space:]]+MLCR([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?([[:space:]]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:FROM|JOIN)\\s+\\(*\\s*(MLCR)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_021",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TABELA",
+   "severidade": "ALTO",
+   "descricao": "Acesso direto a MLCRF - revisar Material Ledger no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(FROM|JOIN)[[:space:]]+MLCRF([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?([[:space:]]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:FROM|JOIN)\\s+\\(*\\s*(MLCRF)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_022",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "FUNCAO",
+   "severidade": "MEDIO",
+   "descricao": "Chamada a CLAF_CLASSIFICATION_OF_OBJECTS (classificacao de objetos) - validar compatibilidade no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*CLAF_CLASSIFICATION_OF_OBJECTS([[:space:]]|['\"(]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(CLAF_CLASSIFICATION_OF_OBJECTS)\\b",
+    "texto": "L",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "FUNC"
+  },
+  {
+   "id": "REGEX_023",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TABELA",
+   "severidade": "ALTO",
+   "descricao": "Acesso direto a MLMST (master do Material Ledger) - revisar no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(FROM|JOIN)[[:space:]]+MLMST([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?([[:space:]]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:FROM|JOIN)\\s+\\(*\\s*(MLMST)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_024",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "CAMPO",
+   "severidade": "MEDIO",
+   "descricao": "Uso do campo VAKEY (chave de variante de condicao) - revisar impacto do novo modelo de dados de condicoes",
+   "origem": {
+    "pcre": "(?i).*VAKEY([[:space:]]|[~_.,;)]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(VAKEY)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "DTEL"
+  },
+  {
+   "id": "REGEX_025",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "BAPI",
+   "severidade": "MEDIO",
+   "descricao": "Chamada a uma BAPI de material (BAPI_MATERIAL_*/BAPI_STANDARDMATERIAL_CREATE) - validar compatibilidade no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(BAPI_MATERIAL_MRP_LIST|BAPI_MATERIAL_SAVEDATA|BAPI_MATERIAL_AVAILABILITY|BAPI_MATERIAL_GET_DETAIL|BAPI_MATERIAL_DISPLAY|BAPI_MATERIAL_GETINTNUMBER|BAPI_MATERIAL_GET_ALL|BAPI_MATERIAL_GET_PRODUCTHIER|BAPI_MATERIAL_SAVEREPLICA|BAPI_MATERIAL_STOCK_REQ_LIST|BAPI_MATERIAL_GETBATCHCERT|BAPI_MATERIAL_EXISTENCECHECK|BAPI_MATERIAL_DELETE|BAPI_MATERIAL_GETLIST|BAPI_MATERIAL_EDIT|BAPI_MATERIAL_PLANNING|BAPI_MATERIAL_GETBATCHES|BAPI_STANDARDMATERIAL_CREATE)([[:space:]]|['\"(]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(BAPI_MATERIAL_MRP_LIST|BAPI_MATERIAL_SAVEDATA|BAPI_MATERIAL_AVAILABILITY|BAPI_MATERIAL_GET_DETAIL|BAPI_MATERIAL_DISPLAY|BAPI_MATERIAL_GETINTNUMBER|BAPI_MATERIAL_GET_ALL|BAPI_MATERIAL_GET_PRODUCTHIER|BAPI_MATERIAL_SAVEREPLICA|BAPI_MATERIAL_STOCK_REQ_LIST|BAPI_MATERIAL_GETBATCHCERT|BAPI_MATERIAL_EXISTENCECHECK|BAPI_MATERIAL_DELETE|BAPI_MATERIAL_GETLIST|BAPI_MATERIAL_EDIT|BAPI_MATERIAL_PLANNING|BAPI_MATERIAL_GETBATCHES|BAPI_STANDARDMATERIAL_CREATE)\\b",
+    "texto": "L",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "FUNC"
+  },
+  {
+   "id": "REGEX_026",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "BAPI",
+   "severidade": "MEDIO",
+   "descricao": "Chamada a BAPI_REQUISITION_CHANGE (requisicao de compra) - validar compatibilidade no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*BAPI_REQUISITION_CHANGE([[:space:]]|['\"(]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(BAPI_REQUISITION_CHANGE)\\b",
+    "texto": "L",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "FUNC"
+  },
+  {
+   "id": "REGEX_027",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "BAPI",
+   "severidade": "MEDIO",
+   "descricao": "Chamada a BAPI_REQUISITION_GETDETAIL (requisicao de compra) - validar compatibilidade no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*BAPI_REQUISITION_GETDETAIL([[:space:]]|['\"(]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(BAPI_REQUISITION_GETDETAIL)\\b",
+    "texto": "L",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "FUNC"
+  },
+  {
+   "id": "REGEX_028",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "BAPI",
+   "severidade": "MEDIO",
+   "descricao": "Chamada a BAPI_SALESORDER_CREATEFROMDAT1 (criacao de pedido de venda) - avaliar BAPI_SALESORDER_CREATEFROMDAT2 no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*BAPI_SALESORDER_CREATEFROMDAT1([[:space:]]|['\"(]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(BAPI_SALESORDER_CREATEFROMDAT1)\\b",
+    "texto": "L",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "FUNC"
+  },
+  {
+   "id": "REGEX_029",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TABELA",
+   "severidade": "ALTO",
+   "descricao": "Acesso direto a AFKO (dados de ordem - cabecalho PP) - validar CDS Views/BAPIs equivalentes no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(FROM|JOIN)[[:space:]]+AFKO([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?([[:space:]]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:FROM|JOIN)\\s+\\(*\\s*(AFKO)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_030",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "TABELA",
+   "severidade": "ALTO",
+   "descricao": "Acesso direto a CAUFV (view de dados de ordem) - validar CDS Views/BAPIs equivalentes no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(FROM|JOIN)[[:space:]]+CAUFV([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?([[:space:]]|$).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\b(?:FROM|JOIN)\\s+\\(*\\s*(CAUFV)\\b",
+    "texto": "C",
+    "elemento_fixo": "",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_031",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "CAMPO",
+   "severidade": "ALTO",
+   "descricao": "Uso do campo CUOBJ (objeto de configuracao) em AFKO - revisar impacto do novo modelo de Variant Configuration (AVC) no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(AFKO[-~]CUOBJ|(FROM|JOIN)[[:space:]]+AFKO([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?[[:space:]].*CUOBJ|CUOBJ.*(FROM|JOIN)[[:space:]]+AFKO([[:space:]]|$)).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\bAFKO[-~]CUOBJ\\b|\\b(?:FROM|JOIN)\\s+\\(*\\s*AFKO\\b.*\\bCUOBJ\\b|\\bCUOBJ\\b.*\\b(?:FROM|JOIN)\\s+\\(*\\s*AFKO\\b",
+    "texto": "C",
+    "elemento_fixo": "AFKO",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  },
+  {
+   "id": "REGEX_032",
+   "ativa": true,
+   "prioridade": 1,
+   "categoria": "CAMPO",
+   "severidade": "ALTO",
+   "descricao": "Uso do campo CUOBJ (objeto de configuracao) em CAUFV - revisar impacto do novo modelo de Variant Configuration (AVC) no S/4HANA",
+   "origem": {
+    "pcre": "(?i).*(CAUFV[-~]CUOBJ|(FROM|JOIN)[[:space:]]+CAUFV([[:space:]]+AS[[:space:]]+[A-Z0-9_]+)?[[:space:]].*CUOBJ|CUOBJ.*(FROM|JOIN)[[:space:]]+CAUFV([[:space:]]|$)).*",
+    "fonte": "ABAP do cliente Z_ABAP_SOURCE_SCAN_MULTI (texto literal)"
+   },
+   "refinada": {
+    "pcre": "\\bCAUFV[-~]CUOBJ\\b|\\b(?:FROM|JOIN)\\s+\\(*\\s*CAUFV\\b.*\\bCUOBJ\\b|\\bCUOBJ\\b.*\\b(?:FROM|JOIN)\\s+\\(*\\s*CAUFV\\b",
+    "texto": "C",
+    "elemento_fixo": "CAUFV",
+    "exige": "",
+    "suprimida_por": ""
+   },
+   "robt": "TABL"
+  }
+ ]
+}

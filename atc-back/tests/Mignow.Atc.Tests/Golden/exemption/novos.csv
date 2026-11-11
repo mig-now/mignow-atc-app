@@ -1,0 +1,11 @@
+﻿quickfixInfo;obj_name;obj_type;tag_REF_OBJ_NAME;messageTitle;priority;checksum;location;exemptionApproval
+atc:AAA,1,  X;ZACIC;PROG;BAPI_SALESORDER_CREATEFROMDAT2;Call of BAPI;1;111;/sap/bc/adt/programs/includes/lzacicf02/source/main#start=535,0;-
+atc:AAA2,10,  X;ZACIC;PROG;BAPI_SALESORDER_CREATEFROMDAT2;BAPI multi;1;112;/sap/bc/adt/programs/includes/lzacicf02/source/main#start=535,0;-
+atc:AAA3,11,  X;ZACIC;PROG;BAPI_SALESORDER_CREATEFROMDAT2;BAPI multi;1;113;/sap/bc/adt/programs/includes/lzacicf02/source/main#start=974,0;-
+atc:BBB,2,  X;ZSYN;PROG;;Syntax error in program;1;-1;/sap/bc/adt/programs/programs/zsyn;-
+atc:CCC,3,  X;ZQRY;AQSG;;SAP Query check;2;999;;-
+atc:DDD,4,  X;ZOLD;PROG;KONV;Table KONV;3;222;;-
+atc:EEE,5,  X;ZJA;PROG;VBUK;Isento na extracao;1;333;;A
+atc:FFF,6,  X;ZPED;PROG;VBUP;Ja pedido;1;444;;-
+atc:HHH,8,  X;ZOLDOBS;PROG;KONV;Antigo;1;555;/sap/bc/adt/programs/includes/zinc/source/main#start=7,3;-
+atc:GGG,7,  X;ZAMB;PROG;BSEG;Sem prioridade;;666;;-

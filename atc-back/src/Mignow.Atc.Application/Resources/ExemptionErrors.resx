@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Exemption.BatchNotFound" xml:space="preserve"><value>Exemption batch not found.</value></data>
+  <data name="Exemption.SessionNotFound" xml:space="preserve"><value>Remediation session not found.</value></data>
+  <data name="Exemption.NoItems" xml:space="preserve"><value>No item with status 'Exemption' (older session? use includeObs).</value></data>
+  <data name="Exemption.NoFindings" xml:space="preserve"><value>No finding left for the exemption batch (all out of scope, already exempt or already requested, or without link).</value></data>
+  <data name="Exemption.ExtractionRequired" xml:space="preserve"><value>Items without Finding ID and no ATC extraction found for the environment.</value></data>
+  <data name="Exemption.ApproverRequired" xml:space="preserve"><value>Approver not informed.</value></data>
+  <data name="Exemption.ApproverIsRequester" xml:space="preserve"><value>The approver ({0}) cannot be the requester (SAP four-eyes principle).</value></data>
+  <data name="Exemption.ReasonUnknown" xml:space="preserve"><value>Reason '{0}' does not exist in the system (valid: {1}).</value></data>
+  <data name="Exemption.DiscoveryRequired" xml:space="preserve"><value>Run the discovery (policy A) before simulating.</value></data>
+  <data name="Exemption.SimulationRequired" xml:space="preserve"><value>Simulate the batch before sending.</value></data>
+  <data name="Exemption.NothingToSend" xml:space="preserve"><value>No simulated finding with scope to send.</value></data>
+  <data name="Exemption.NothingToCheck" xml:space="preserve"><value>No requested finding to check.</value></data>
+  <data name="Exemption.SeqUnknown" xml:space="preserve"><value>seq not in the batch: {0}.</value></data>
+  <data name="Exemption.Discovery.ApplyNotPublished" xml:space="preserve"><value>ADT service /sap/bc/adt/atc/exemptions/apply is not published.</value></data>
+  <data name="Exemption.Discovery.PolicyNotAllowed" xml:space="preserve"><value>ATC exemption policy = '{value}' ({text}); ADT only accepts requests with 'A' (ATC &gt; Setup &gt; Configure ATC, ATC administrator).</value></data>
+  <data name="Exemption.Discovery.NoTemplate" xml:space="preserve"><value>Request template not returned for the sample finding: {message}</value></data>
+  <data name="Exemption.Discovery.NoApprovers" xml:space="preserve"><value>No exemption approver registered (SATC_CI_APPROVER/SATC_CI_AREA empty): ATC &gt; Setup &gt; Maintain Approvers.</value></data>
+  <data name="Exemption.Discovery.Ok" xml:space="preserve"><value>Discovery done. Policy: {policy}.</value></data>
+  <data name="Exemption.Send.PolicyDisabled" xml:space="preserve"><value>Exemptions disabled in the system (EXEMPTION.POLICY = '{value}', {text}): nothing was sent.</value></data>
+  <data name="Exemption.Simulate.Done" xml:space="preserve"><value>Simulation done: {count} finding(s).</value></data>
+  <data name="Exemption.Send.Done" xml:space="preserve"><value>Send done: {count} finding(s).</value></data>
+  <data name="Exemption.Check.Done" xml:space="preserve"><value>Check done: {count} finding(s).</value></data>
+  <data name="Exemption.Check.StillNoExemption" xml:space="preserve"><value>Request accepted (S), but the finding still has no exemption (SAP returns a new template): check in transaction ATC.</value></data>
+  <data name="Exemption.Check.SapMessage" xml:space="preserve"><value>SAP situation of the finding.</value></data>
+  <data name="ExemptionRequest.InvalidSeq" xml:space="preserve"><value>Seq starts at 1.</value></data>
+  <data name="ExemptionRequest.DuplicateMarker" xml:space="preserve"><value>The finding is already in the batch.</value></data>
+</root>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Session.NotFound" xml:space="preserve"><value>Remediation session not found.</value></data>
+  <data name="Session.ItemNotFound" xml:space="preserve"><value>Item not found in the session.</value></data>
+  <data name="Session.Archived" xml:space="preserve"><value>The session is archived (previous cycle) and cannot be changed.</value></data>
+  <data name="Session.CsvColumnsMissing" xml:space="preserve"><value>The CSV needs the columns 'Object name' and 'Obj.'.</value></data>
+  <data name="Session.CsvPriorityColumnMissing" xml:space="preserve"><value>Priorities were requested but the CSV has no 'Priority' column.</value></data>
+  <data name="Session.CsvEmpty" xml:space="preserve"><value>The CSV is empty.</value></data>
+  <data name="Session.InvalidStatusFilter" xml:space="preserve"><value>Invalid status filter.</value></data>
+  <data name="Session.ReuseOtherSystem" xml:space="preserve"><value>Reuse requires another session of the same SAP system.</value></data>
+  <data name="Triage.UnknownRule" xml:space="preserve"><value>Unknown triage rule {0} (valid: {1}).</value></data>
+  <data name="Remediation.StandardNotRead" xml:space="preserve"><value>Standard object {0} {1} ({2} items) not read: confirm and run again with includeStandard.</value></data>
+  <data name="Remediation.ReadSourceFailed" xml:space="preserve"><value>Failed to read {0} {1}: {2}</value></data>
+  <data name="Remediation.ObjectNotFound" xml:space="preserve"><value>Object {0} {1} not found in SAP.</value></data>
+  <data name="Remediation.ReadSourcesPlanned" xml:space="preserve"><value>{0} objects to read for {1} items.</value></data>
+  <data name="Remediation.ReadSourcesNoPlan" xml:space="preserve"><value>The read plan is missing (rerun the run).</value></data>
+  <data name="Remediation.ReadSourcesDone" xml:space="preserve"><value>{0} objects: {1} read, {2} cached, {3} not found, {4} errors.</value></data>
+  <data name="Remediation.ConfirmR1Checked" xml:space="preserve"><value>R1 check done for {0} items.</value></data>
+  <data name="Remediation.ConfirmR1Applied" xml:space="preserve"><value>R1 check applied to {0} items.</value></data>
+  <data name="Remediation.ConfirmR1NotApplied" xml:space="preserve"><value>R1 check not applied (proposal only).</value></data>
+  <data name="Remediation.Step.READ_SOURCES_PLAN" xml:space="preserve"><value>Select objects</value></data>
+  <data name="Item.NotFound" xml:space="preserve"><value>Item not found.</value></data>
+  <data name="TriageRule.NotFound" xml:space="preserve"><value>Triage rule not found.</value></data>
+  <data name="TriageRule.CodeExists" xml:space="preserve"><value>Triage rule {0} already exists.</value></data>
+  <data name="TriageRule.BuiltInCannotDelete" xml:space="preserve"><value>{0} is a standard rule: it cannot be deleted, deactivate it instead.</value></data>
+  <data name="TriageRule.CriteriaRequired" xml:space="preserve"><value>Enter at least one criterion: referenced objects, object name or check/message text.</value></data>
+  <data name="TriageRule.RefObjectsRequired" xml:space="preserve"><value>Rule {0} needs at least one referenced object.</value></data>
+  <data name="TriageRule.CodeRequired" xml:space="preserve"><value>Rule code is required.</value></data>
+  <data name="TriageRule.DescriptionRequired" xml:space="preserve"><value>Rule description is required.</value></data>
+  <data name="TriageRule.InvalidEffect" xml:space="preserve"><value>Invalid rule effect.</value></data>
+  <data name="TriageRule.BuiltInCriteria" xml:space="preserve"><value>Standard rule: the effect stays in the code.</value></data>
+  <data name="TriageRule.UnknownParameter" xml:space="preserve"><value>Unknown parameter {0} (valid: {1}).</value></data>
+  <data name="TriageRule.ParameterRequired" xml:space="preserve"><value>Parameter {0} needs at least one value.</value></data>
+  <data name="Source.NotFound" xml:space="preserve"><value>Source not found in this session.</value></data>
+</root>

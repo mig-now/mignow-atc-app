@@ -1,0 +1,71 @@
+/*
+ * ⚠️ PROVISÓRIO — tokens no formato shadcn-native do @mig-now/ds, com as cores da marca Mignow.
+ * O pacote @mig-now/ds não instala sem o PAT read:packages (blueprint de front §1.2). Quando houver acesso:
+ * troque o import deste arquivo em app.css por "@mig-now/ds/tokens/fonts.css" + "@mig-now/ds/tokens/app.css" e apague este arquivo.
+ */
+.light {
+  --background: #f7f8fc;
+  --foreground: #12142b;
+  --card: #ffffff;
+  --card-foreground: #12142b;
+  --popover: #ffffff;
+  --popover-foreground: #12142b;
+  --primary: #6f81fe;
+  --primary-foreground: #ffffff;
+  --secondary: #eceefb;
+  --secondary-foreground: #23264a;
+  --muted: #eef0f7;
+  --muted-foreground: #5d6283;
+  --accent: #e8ebff;
+  --accent-foreground: #23264a;
+  --destructive: #d93a52;
+  --destructive-foreground: #ffffff;
+  --success: #1f9d6b;
+  --warning: #c98a12;
+  --info: #3b8fd9;
+  --border: #dfe2ef;
+  --input: #d5d9ea;
+  --ring: #6f81fe;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #23264a;
+  --sidebar-primary: #6f81fe;
+  --sidebar-accent: #eef0fe;
+  --sidebar-accent-foreground: #23264a;
+  --sidebar-border: #e3e6f2;
+  --ui-radius-sm: 6px;
+  --ui-radius-md: 8px;
+  --ui-radius-lg: 12px;
+}
+.dark {
+  --background: #0b0d1f;
+  --foreground: #e8eaf6;
+  --card: #131631;
+  --card-foreground: #e8eaf6;
+  --popover: #161a38;
+  --popover-foreground: #e8eaf6;
+  --primary: #7f8ffe;
+  --primary-foreground: #0b0d1f;
+  --secondary: #1d2145;
+  --secondary-foreground: #e8eaf6;
+  --muted: #1a1e3d;
+  --muted-foreground: #9aa0c7;
+  --accent: #232857;
+  --accent-foreground: #e8eaf6;
+  --destructive: #ef5f75;
+  --destructive-foreground: #0b0d1f;
+  --success: #3dc28d;
+  --warning: #e5a93a;
+  --info: #5aa8ee;
+  --border: #262b55;
+  --input: #2c3260;
+  --ring: #7f8ffe;
+  --sidebar: #0f1229;
+  --sidebar-foreground: #d6d9f1;
+  --sidebar-primary: #8fa0ff;
+  --sidebar-accent: #1c2148;
+  --sidebar-accent-foreground: #eef0ff;
+  --sidebar-border: #20254d;
+  --ui-radius-sm: 6px;
+  --ui-radius-md: 8px;
+  --ui-radius-lg: 12px;
+}

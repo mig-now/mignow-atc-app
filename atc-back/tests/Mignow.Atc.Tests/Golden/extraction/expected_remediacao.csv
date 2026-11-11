@@ -1,0 +1,5 @@
+﻿Priority;Check Title;Check Message;Object name;Obj.;Exemption State;Contact;Package;1st Found;Obj. Resp.;Changed by;Note;Short Text;Component;RObT;Referenced Object;Additional Info;Category;Category7;Text;Remarks;Finding ID
+1;S/4HANA Readiness;"KONV is not a table; use PRCD_ELEMENTS";ZMIG_SD_PRICING;PROG;;;ZMIGFIX_TEST;20.10.2026;DEVELOPER;;2385939;Note 2385939 title;;TABL;KONV;"add;info";NEW;1;Simplification;;MK0123456789AB
+2;Field Length;"Material ""extended""
+to 40";ZCL_MIG;CLAS;;;ZMIGFIX_TEST;;;;42;;;DTEL;MATNR;;;;;;MK0123456789AC
+3;Performance;SELECT * reads all;ZMIG_X;PROG;;;$TMP;;DEV2;;;;;;;;;2;Cat two;;

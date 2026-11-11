@@ -1,0 +1,4 @@
+# O postinstall do msw só copia o service worker, que não usamos nos testes.
+allowBuilds:
+  msw: false
+  esbuild: true

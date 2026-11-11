@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Mignow.Atc.Infra.External</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- IHttpContextAccessor (usuário atual) -->
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http.Resilience" />
+    <PackageReference Include="Anthropic" />
+    <PackageReference Include="Scrutor" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mignow.Atc.Application\Mignow.Atc.Application.csproj" />
+    <ProjectReference Include="..\Mignow.Atc.Domain\Mignow.Atc.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Mignow.Atc.Tests" />
+  </ItemGroup>
+</Project>

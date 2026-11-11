@@ -1,0 +1,12 @@
+[
+ {
+  "seq": 1,
+  "resultado": "PEDIDO",
+  "motivo": "FPOS"
+ },
+ {
+  "seq": 2,
+  "resultado": "SEM_ESCOPO",
+  "motivo": "FPOS"
+ }
+]

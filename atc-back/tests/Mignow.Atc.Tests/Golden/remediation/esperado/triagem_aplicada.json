@@ -1,0 +1,110 @@
+{
+ "regras": {
+  "R1": "sem código + Ambiguous → Cancelado",
+  "R2": "já corrigido → Confirmado KB",
+  "R3": "uso não localizado → só sinaliza",
+  "R4": "uso ativo + bloco DELETION do mesmo objeto → só sinaliza (conferir se já corrigido)",
+  "R5": "nota 2438131 com *_LONG em todas as chamadas → Isenção (pedido via atc-isencao)",
+  "R6": "objeto standard (modificação/exit) → só sinaliza; fim da fila, leitura com confirmação",
+  "R7": "objeto referenciado BSEG → Isenção, obs \"pendente para o funcional\"",
+  "R8": "MODIFY/UPDATE/INSERT em tabela standard → Isenção, obs \"Out Of Scope - Analise do Cliente\"",
+  "R9": "upgrade: objeto referenciado BSEG/KNKK/S066/S067/KONV/CKMLCR/CKMLPP/MB0A → Isenção",
+  "MIGNOW_FSCM_PRODUCT": "produto MIGNOW (Objetos do produto MIGNOW de migração para FSCM Credit Management) → Cancelado"
+ },
+ "tipo_projeto": "conversao",
+ "R1": [
+  {
+   "n": 9,
+   "objeto": "ZTABLE_H",
+   "tipo": "TABL",
+   "ref": "MARA",
+   "obs": "Triagem R1: objeto sem código ABAP, finding Ambiguous (confirmar na SE11)"
+  }
+ ],
+ "R2": [
+  {
+   "n": 2,
+   "objeto": "ZPROG_B",
+   "tipo": "PROG",
+   "ref": "VBUK",
+   "obs": "Triagem R2: já corrigido no sistema (uso só em bloco DELETION: ZPROG_B:3)"
+  }
+ ],
+ "R3": [
+  {
+   "n": 3,
+   "objeto": "ZPROG_C",
+   "tipo": "PROG",
+   "ref": "MKPF",
+   "obs": "Triagem R3: uso do objeto referenciado não localizado no fonte"
+  }
+ ],
+ "R4": [
+  {
+   "n": 4,
+   "objeto": "ZPROG_D",
+   "tipo": "PROG",
+   "ref": "ME53",
+   "obs": "Triagem R4: uso ativo em ZPROG_D:3, ZPROG_D:4; já existe bloco DELETION com o objeto (ZPROG_D:7) – conferir se já foi corrigido"
+  }
+ ],
+ "R5": [
+  {
+   "n": 5,
+   "objeto": "ZPROG_E",
+   "tipo": "PROG",
+   "ref": "BAPI_MATERIAL_SAVEDATA",
+   "chamadas": [
+    "ZPROG_E_F01:1 [material_long]"
+   ],
+   "obs": "Triagem R5: já corrigido (MATERIAL_LONG em todas as chamadas); o check marca qualquer chamada da BAPI – solicitar isenção ATC (falso positivo)"
+  }
+ ],
+ "R6": [
+  {
+   "n": 6,
+   "objeto": "SAPMV45A",
+   "tipo": "PROG",
+   "ref": "KONV",
+   "obs": "Triagem R6: objeto standard (modificação/exit) – deixado para o final"
+  }
+ ],
+ "R7": [
+  {
+   "n": 7,
+   "objeto": "ZPROG_F",
+   "tipo": "PROG",
+   "ref": "BSEG",
+   "obs": "Triagem R7: BSEG – pendente para o funcional (avaliação de negócio; sem correção técnica nesta remediação)"
+  }
+ ],
+ "R8": [
+  {
+   "n": 8,
+   "objeto": "ZPROG_G",
+   "tipo": "PROG",
+   "ref": "VBAK",
+   "operacao": "MODIFY",
+   "obs": "Out Of Scope - Analise do Cliente"
+  }
+ ],
+ "R9": [],
+ "MIGNOW_FSCM_PRODUCT": [
+  {
+   "n": 10,
+   "objeto": "ZGFSCM_MIG_CREDITO",
+   "tipo": "PROG",
+   "ref": "KNA1",
+   "obs": "Triagem MIGNOW_FSCM_PRODUCT: objeto do produto MIGNOW (Objetos do produto MIGNOW de migração para FSCM Credit Management) – finding ignorado"
+  }
+ ],
+ "aplicados": [
+  9,
+  2,
+  5,
+  7,
+  8,
+  10
+ ],
+ "pendentes": 8
+}

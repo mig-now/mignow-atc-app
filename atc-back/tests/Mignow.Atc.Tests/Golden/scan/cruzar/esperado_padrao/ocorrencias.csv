@@ -1,0 +1,10 @@
+﻿tipo;nome;fonte;linha;linha_fim;regra;elemento;situacao;cruzamento;trecho
+PROG;ZPROG1;programs/programs/zprog1;10;12;REGEX_001;VBUK;pendente;ATC_PEGOU;SELECT * FROM VBUK INTO TABLE LT WHERE VBELN = ''
+PROG;ZPROG1;programs/programs/zprog1;20;20;REGEX_002;KONV;pendente;ATC_OUTRA_LINHA;SELECT * FROM KONV INTO TABLE LT
+PROG;ZPROG1;programs/programs/zprog1;30;30;REGEX_003;MATNR;ja_remediado;;CALL FUNCTION 'CONVERSION_EXIT_ALPHA_INPUT' MATNR
+PROG;ZPROG1;programs/programs/zprog1;40;40;REGEX_003;;informativo;;VAR = ALPHA = IN
+PROG;ZINC;programs/includes/zinc;5;5;REGEX_001;VBUP;pendente;MIGNOW_FONTE_COM_FINDING;"SELECT a; b FROM VBUP WHERE x = ""y"""
+CLAS;ZCL_A;oo/classes/zcl_a;100;101;REGEX_001;VBUK;pendente;ATC_PEGOU;SELECT * FROM VBUK
+CLAS;ZCL_A;oo/classes/zcl_a#include=zcl_a=============cu;3;3;REGEX_001;VBUK;pendente;ATC_OUTRA_LINHA;SELECT * FROM VBUK
+FUGR;ZFG;functions/groups/zfg/fmodules/zfm1;7;8;REGEX_002;KONV;pendente;MIGNOW_FONTE_SEM_FINDING;SELECT * FROM KONV
+FUGR;ZFG;functions/groups/zfg/includes/lzfgf01;2;2;REGEX_005;XK01;pendente;MIGNOW_FONTE_SEM_FINDING;CALL TRANSACTION 'XK01'

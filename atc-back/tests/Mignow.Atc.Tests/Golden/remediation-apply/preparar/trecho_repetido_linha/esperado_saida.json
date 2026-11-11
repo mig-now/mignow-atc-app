@@ -1,0 +1,8 @@
+{
+ "ok": true,
+ "fonte": "ZPROG.abap",
+ "linhas_substituidas": "5-5",
+ "linhas_novas": 6,
+ "novo_fonte": "/private/tmp/claude-501/-Users-neto-Downloads-MigNow---Documentos-Projetos-mignow-atc-process-main/6a3b8704-1ac1-4b4b-92b6-f08484b79ea0/scratchpad/remediation-apply/x/clientes/DEMO/tmp/item_0007/novo_fonte.abap",
+ "diff": "/private/tmp/claude-501/-Users-neto-Downloads-MigNow---Documentos-Projetos-mignow-atc-process-main/6a3b8704-1ac1-4b4b-92b6-f08484b79ea0/scratchpad/remediation-apply/x/clientes/DEMO/tmp/item_0007/diff.txt"
+}

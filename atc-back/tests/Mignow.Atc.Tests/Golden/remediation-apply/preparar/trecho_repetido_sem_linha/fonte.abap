@@ -1,0 +1,6 @@
+FORM a.
+  SELECT * FROM konv INTO TABLE lt WHERE x = 1.
+ENDFORM.
+FORM b.
+  SELECT * FROM konv INTO TABLE lt WHERE x = 1.
+ENDFORM.

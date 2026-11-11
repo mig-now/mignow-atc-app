@@ -1,0 +1,38 @@
+{
+ "S00068": {
+  "por": "C-ME52-001",
+  "elemento": "ME52",
+  "data": "2026-10-22",
+  "motivo": "BDC com telas classicas SAPMM06B nao funciona no ME52N (SAPLMEGUI); usar BAPI_PR_CHANGE"
+ },
+ "S00795": {
+  "por": "C-ME52-001",
+  "elemento": "ME52",
+  "data": "2026-10-22",
+  "motivo": "BDC com telas classicas SAPMM06B nao funciona no ME52N (SAPLMEGUI); usar BAPI_PR_CHANGE"
+ },
+ "S02508": {
+  "por": "C-ME52-001",
+  "elemento": "ME52",
+  "data": "2026-10-22",
+  "motivo": "BDC com telas classicas SAPMM06B nao funciona no ME52N (SAPLMEGUI); usar BAPI_PR_CHANGE"
+ },
+ "C-BAPI_SALESORDER_CREATEFROMDATA-001": {
+  "por": "C-BAPI_SALESORDER_CREATEFROMDATA-002",
+  "elemento": "BAPI_SALESORDER_CREATEFROMDATA",
+  "data": "2026-10-22",
+  "motivo": "versao especifica de 1 item; usar o modelo generico"
+ },
+ "C-ISM_SD_GET_PRICING_CONDITIONS-001": {
+  "por": "C-ISM_SD_GET_PRICING_CONDITIONS-002",
+  "elemento": "ISM_SD_GET_PRICING_CONDITIONS",
+  "data": "2026-10-23",
+  "motivo": "SELECT * em PRCD_ELEMENTS para KONV_TTY nao ativa (KDATU incompativel)"
+ },
+ "C-XK01-003": {
+  "por": "C-XK01-004",
+  "elemento": "XK01",
+  "data": "2026-10-24",
+  "motivo": "Versao ativada: reaproveita o BP do cliente ligado (LFA1-KUNNR), pois cliente e fornecedor ligados ficam no mesmo BP (F-XK01-003)"
+ }
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Ai.Failed" xml:space="preserve"><value>A chamada à IA falhou: {0}</value></data>
+  <data name="Ai.InvalidResponse" xml:space="preserve"><value>A IA devolveu uma resposta inválida: {0}</value></data>
+  <data name="Ai.NotConfigured" xml:space="preserve"><value>Provedor de IA não configurado ({0}).</value></data>
+  <data name="AiProvider.InactiveCannotBeDefault" xml:space="preserve"><value>Um provedor inativo não pode ser o padrão.</value></data>
+  <data name="AiProvider.IsDefault" xml:space="preserve"><value>Torne outro provedor o padrão deste uso antes de apagar este.</value></data>
+  <data name="AiProvider.ModelRequired" xml:space="preserve"><value>O modelo é obrigatório.</value></data>
+  <data name="AiProvider.NameRequired" xml:space="preserve"><value>O nome é obrigatório.</value></data>
+  <data name="AiProvider.NotFound" xml:space="preserve"><value>Provedor de IA não encontrado.</value></data>
+  <data name="Customer.HasSapSystems" xml:space="preserve"><value>O cliente ainda tem ambientes.</value></data>
+  <data name="Customer.NameAlreadyExists" xml:space="preserve"><value>Já existe um cliente com o nome "{0}".</value></data>
+  <data name="Customer.NameRequired" xml:space="preserve"><value>O nome é obrigatório.</value></data>
+  <data name="Customer.NotFound" xml:space="preserve"><value>Cliente não encontrado.</value></data>
+  <data name="Data.Duplicate" xml:space="preserve"><value>Este registro já existe.</value></data>
+  <data name="Data.InUse" xml:space="preserve"><value>O registro ainda está em uso.</value></data>
+  <data name="ExemptionBatch.PrioritiesRequired" xml:space="preserve"><value>As prioridades são obrigatórias.</value></data>
+  <data name="ExemptionBatch.ReasonRequired" xml:space="preserve"><value>O motivo é obrigatório.</value></data>
+  <data name="ExemptionBatch.ValidityRequired" xml:space="preserve"><value>A validade é obrigatória.</value></data>
+  <data name="ExemptionRequest.InvalidStatus" xml:space="preserve"><value>Status de isenção inválido.</value></data>
+  <data name="ExemptionRequest.MarkerRequired" xml:space="preserve"><value>O Finding ID (markerId) é obrigatório.</value></data>
+  <data name="ExemptionRequest.ReasonRequired" xml:space="preserve"><value>O motivo é obrigatório.</value></data>
+  <data name="Extraction.DisplayIdRequired" xml:space="preserve"><value>O id da execução do ATC é obrigatório.</value></data>
+  <data name="Extraction.InvalidCounts" xml:space="preserve"><value>Contagens negativas.</value></data>
+  <data name="Extraction.SeriesRequired" xml:space="preserve"><value>A série do ATC é obrigatória.</value></data>
+  <data name="Finding.ObjectRequired" xml:space="preserve"><value>O objeto é obrigatório.</value></data>
+  <data name="Item.InvalidLine" xml:space="preserve"><value>Linha do CSV a partir de 1.</value></data>
+  <data name="Item.InvalidOrigin" xml:space="preserve"><value>Origem ATC ou MIGNOW.</value></data>
+  <data name="Item.InvalidStatus" xml:space="preserve"><value>Status inválido.</value></data>
+  <data name="Item.ObjectRequired" xml:space="preserve"><value>O objeto é obrigatório.</value></data>
+  <data name="Item.ObjectTypeRequired" xml:space="preserve"><value>O tipo do objeto é obrigatório.</value></data>
+  <data name="Occurrence.InvalidCross" xml:space="preserve"><value>Cruzamento inválido.</value></data>
+  <data name="Occurrence.ObjectRequired" xml:space="preserve"><value>O objeto é obrigatório.</value></data>
+  <data name="Occurrence.ObjectTypeRequired" xml:space="preserve"><value>O tipo do objeto é obrigatório.</value></data>
+  <data name="Occurrence.RuleRequired" xml:space="preserve"><value>A regra é obrigatória.</value></data>
+  <data name="Run.DuplicateStep" xml:space="preserve"><value>Passo repetido no pipeline.</value></data>
+  <data name="Run.EnvironmentBusy" xml:space="preserve"><value>Já existe uma execução em andamento neste ambiente ({0}, iniciada por {1}).</value></data>
+  <data name="Run.NoPipeline" xml:space="preserve"><value>Nenhum pipeline registrado para {0}.</value></data>
+  <data name="Run.NoSteps" xml:space="preserve"><value>O pipeline não tem passos.</value></data>
+  <data name="Run.NotActive" xml:space="preserve"><value>A execução já terminou.</value></data>
+  <data name="Run.NotFailed" xml:space="preserve"><value>Só uma execução com falha pode ser reprocessada.</value></data>
+  <data name="Run.NotFound" xml:space="preserve"><value>Execução não encontrada.</value></data>
+  <data name="Run.NotQueued" xml:space="preserve"><value>Só uma execução na fila pode iniciar.</value></data>
+  <data name="Run.SapSystemRequired" xml:space="preserve"><value>A execução precisa de cliente e ambiente.</value></data>
+  <data name="Run.StartedByRequired" xml:space="preserve"><value>O autor da execução é obrigatório.</value></data>
+  <data name="Run.StepCodeRequired" xml:space="preserve"><value>O código do passo é obrigatório.</value></data>
+  <data name="Run.UnknownStep" xml:space="preserve"><value>Passo desconhecido.</value></data>
+  <data name="RunAiCall.ModelRequired" xml:space="preserve"><value>O modelo é obrigatório.</value></data>
+  <data name="RunEvent.CodeRequired" xml:space="preserve"><value>O código do evento é obrigatório.</value></data>
+  <data name="Sap.CertificateRejected" xml:space="preserve"><value>O certificado do ambiente SAP foi recusado.</value></data>
+  <data name="Sap.ConnectionOk" xml:space="preserve"><value>Conexão OK.</value></data>
+  <data name="Sap.NotImplemented" xml:space="preserve"><value>Operação SAP não implementada: {0}.</value></data>
+  <data name="Sap.ObjectNotFound" xml:space="preserve"><value>Objeto {0} não encontrado no SAP.</value></data>
+  <data name="Sap.OnlySelect" xml:space="preserve"><value>Somente SELECT é permitido.</value></data>
+  <data name="Sap.ScenarioNotFound" xml:space="preserve"><value>Cenário do simulador não encontrado: {0}.</value></data>
+  <data name="Sap.SimulatorNotAllowed" xml:space="preserve"><value>O simulador SAP só está disponível em desenvolvimento.</value></data>
+  <data name="Sap.SqlFailed" xml:space="preserve"><value>A consulta SQL falhou no SAP ({0}).</value></data>
+  <data name="Sap.Upstream" xml:space="preserve"><value>O SAP não respondeu como esperado ({0}).</value></data>
+  <data name="Sap.WriteBlockedCategoryUnknown" xml:space="preserve"><value>Escrita bloqueada: não foi possível confirmar a categoria do mandante {0} (T000).</value></data>
+  <data name="Sap.WriteBlockedProduction" xml:space="preserve"><value>Escrita bloqueada: o cadastro marca o ambiente como produção (mandante {0}).</value></data>
+  <data name="Sap.WriteBlockedProductionClient" xml:space="preserve"><value>Escrita bloqueada: mandante {0} é de produção (T000-CCCATEGORY = P).</value></data>
+  <data name="SapSystem.AlreadyExists" xml:space="preserve"><value>O cliente já tem o ambiente {0}/{1}.</value></data>
+  <data name="SapSystem.AuthorRequired" xml:space="preserve"><value>O autor é obrigatório.</value></data>
+  <data name="SapSystem.ClientRequired" xml:space="preserve"><value>O mandante é obrigatório.</value></data>
+  <data name="SapSystem.HasRuns" xml:space="preserve"><value>O ambiente tem execuções (histórico) e não pode ser apagado; desative-o.</value></data>
+  <data name="SapSystem.HostRequired" xml:space="preserve"><value>O host é obrigatório.</value></data>
+  <data name="SapSystem.Inactive" xml:space="preserve"><value>O ambiente {0} está inativo.</value></data>
+  <data name="SapSystem.InvalidAuthor" xml:space="preserve"><value>O autor tem o formato AUT-XX.</value></data>
+  <data name="SapSystem.InvalidClient" xml:space="preserve"><value>O mandante tem 3 dígitos.</value></data>
+  <data name="SapSystem.InvalidHost" xml:space="preserve"><value>Informe só o host (sem http:// ou https://).</value></data>
+  <data name="SapSystem.InvalidPort" xml:space="preserve"><value>Porta ADT entre 1 e 65535.</value></data>
+  <data name="SapSystem.LanguageRequired" xml:space="preserve"><value>O idioma é obrigatório.</value></data>
+  <data name="SapSystem.NotFound" xml:space="preserve"><value>Ambiente não encontrado.</value></data>
+  <data name="SapSystem.PasswordMissing" xml:space="preserve"><value>O ambiente {0} não tem senha cadastrada.</value></data>
+  <data name="SapSystem.SidRequired" xml:space="preserve"><value>O SID é obrigatório.</value></data>
+  <data name="SapSystem.UserRequired" xml:space="preserve"><value>O usuário é obrigatório.</value></data>
+  <data name="Scan.SapSystemRequired" xml:space="preserve"><value>A varredura precisa do ambiente.</value></data>
+  <data name="Server.Unexpected" xml:space="preserve"><value>Erro inesperado no servidor.</value></data>
+  <data name="Session.AuthorRequired" xml:space="preserve"><value>O autor é obrigatório.</value></data>
+  <data name="Session.EncodingRequired" xml:space="preserve"><value>A codificação do CSV é obrigatória.</value></data>
+  <data name="Session.InvalidCycle" xml:space="preserve"><value>Ciclo a partir de 1.</value></data>
+  <data name="Session.PrioritiesRequired" xml:space="preserve"><value>As prioridades são obrigatórias.</value></data>
+  <data name="Session.SapSystemRequired" xml:space="preserve"><value>A sessão precisa de cliente e ambiente.</value></data>
+  <data name="Settings.InvalidMignowParallel" xml:space="preserve"><value>Paralelismo da varredura entre 1 e 9.</value></data>
+  <data name="Settings.MignowParallelAboveAdtLimit" xml:space="preserve"><value>O paralelismo da varredura excede o limite de chamadas simultâneas do ADT por ambiente (Sap:Adt:MaxConcurrencyPerSystem menos 1 espaço reservado).</value></data>
+  <data name="Settings.InvalidNumber" xml:space="preserve"><value>Valores numéricos fora da faixa.</value></data>
+  <data name="Settings.InvalidParallelism" xml:space="preserve"><value>Paralelismo entre 1 e 16.</value></data>
+  <data name="Settings.KbPathRequired" xml:space="preserve"><value>O caminho da KB é obrigatório.</value></data>
+  <data name="Settings.MignowRulesPathRequired" xml:space="preserve"><value>O caminho das regras MIGNOW é obrigatório.</value></data>
+  <data name="SourceCache.IncludeRequired" xml:space="preserve"><value>O include é obrigatório.</value></data>
+  <data name="SourceCache.ObjectRequired" xml:space="preserve"><value>O objeto é obrigatório.</value></data>
+  <data name="SourceCache.UriRequired" xml:space="preserve"><value>A URI ADT é obrigatória.</value></data>
+  <data name="Validation.Failed" xml:space="preserve"><value>Alguns campos estão inválidos.</value></data>
+  <data name="Run.Started" xml:space="preserve"><value>Execução iniciada.</value></data>
+  <data name="Run.Resumed" xml:space="preserve"><value>Execução retomada após interrupção.</value></data>
+  <data name="Run.Completed" xml:space="preserve"><value>Execução concluída.</value></data>
+  <data name="Run.Cancelled" xml:space="preserve"><value>Execução cancelada por {0}.</value></data>
+  <data name="Run.CancelRequested" xml:space="preserve"><value>Cancelamento solicitado por {0}.</value></data>
+  <data name="Run.RetryRequested" xml:space="preserve"><value>Reprocessamento solicitado por {0} (falha anterior: {1}).</value></data>
+  <data name="Run.Recovered" xml:space="preserve"><value>Execução recuperada após a reinicialização do serviço.</value></data>
+  <data name="Run.UnexpectedError" xml:space="preserve"><value>Erro inesperado na execução ({0}).</value></data>
+  <data name="Step.Failed" xml:space="preserve"><value>O passo falhou.</value></data>
+  <data name="Step.UnexpectedError" xml:space="preserve"><value>Erro inesperado no passo.</value></data>
+</root>

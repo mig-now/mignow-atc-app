@@ -1,0 +1,161 @@
+{
+ "candidatos": [
+  {
+   "tipo": "FUNC",
+   "nome": "FI_DOCUMENT_CHANGE",
+   "ocorrencias": 15,
+   "em_cache": false
+  },
+  {
+   "tipo": "STRU",
+   "nome": "BAPIRET2",
+   "ocorrencias": 7,
+   "em_cache": false
+  },
+  {
+   "tipo": "FUNC",
+   "nome": "BAPI_TRANSACTION_COMMIT",
+   "ocorrencias": 4,
+   "em_cache": false
+  },
+  {
+   "tipo": "STRU",
+   "nome": "BAPIMEREQITEMIMP",
+   "ocorrencias": 4,
+   "em_cache": false
+  },
+  {
+   "tipo": "STRU",
+   "nome": "BAPIMEREQITEMX",
+   "ocorrencias": 4,
+   "em_cache": false
+  },
+  {
+   "tipo": "STRU",
+   "nome": "BAPIEBAND",
+   "ocorrencias": 4,
+   "em_cache": false
+  },
+  {
+   "tipo": "STRU",
+   "nome": "BAPIRETURN",
+   "ocorrencias": 4,
+   "em_cache": false
+  },
+  {
+   "tipo": "STRU",
+   "nome": "BAPISDITM",
+   "ocorrencias": 4,
+   "em_cache": false
+  },
+  {
+   "tipo": "STRU",
+   "nome": "BAPISCHDL",
+   "ocorrencias": 4,
+   "em_cache": false
+  },
+  {
+   "tipo": "FUNC",
+   "nome": "BAPI_TRANSACTION_ROLLBACK",
+   "ocorrencias": 3,
+   "em_cache": false
+  },
+  {
+   "tipo": "FUNC",
+   "nome": "BAPI_PR_CHANGE",
+   "ocorrencias": 2,
+   "em_cache": false
+  },
+  {
+   "tipo": "FUNC",
+   "nome": "BAPI_REQUISITION_DELETE",
+   "ocorrencias": 2,
+   "em_cache": false
+  },
+  {
+   "tipo": "FUNC",
+   "nome": "BAPI_SALESORDER_CREATEFROMDAT2",
+   "ocorrencias": 2,
+   "em_cache": false
+  },
+  {
+   "tipo": "STRU",
+   "nome": "BAPISDHD1",
+   "ocorrencias": 2,
+   "em_cache": false
+  },
+  {
+   "tipo": "STRU",
+   "nome": "BAPIPARNR",
+   "ocorrencias": 2,
+   "em_cache": false
+  },
+  {
+   "tipo": "FUNC",
+   "nome": "BAPI_PO_CREATE1",
+   "ocorrencias": 1,
+   "em_cache": false
+  },
+  {
+   "tipo": "FUNC",
+   "nome": "BAPI_ACC_DOCUMENT_REV_POST",
+   "ocorrencias": 1,
+   "em_cache": false
+  },
+  {
+   "tipo": "FUNC",
+   "nome": "BAPI_ACC_DOCUMENT_POST",
+   "ocorrencias": 1,
+   "em_cache": false
+  },
+  {
+   "tipo": "STRU",
+   "nome": "BAPI3007_2",
+   "ocorrencias": 1,
+   "em_cache": false
+  },
+  {
+   "tipo": "FUNC",
+   "nome": "BAPI_MATERIAL_GET_ALL",
+   "ocorrencias": 1,
+   "em_cache": false
+  },
+  {
+   "tipo": "STRU",
+   "nome": "BAPIITEMIN",
+   "ocorrencias": 1,
+   "em_cache": false
+  },
+  {
+   "tipo": "FUNC",
+   "nome": "CONVERSION_EXIT_MATN1_INPUT",
+   "ocorrencias": 1,
+   "em_cache": false
+  }
+ ],
+ "faltando_no_cache": [
+  "FI_DOCUMENT_CHANGE",
+  "BAPIRET2",
+  "BAPI_TRANSACTION_COMMIT",
+  "BAPIMEREQITEMIMP",
+  "BAPIMEREQITEMX",
+  "BAPIEBAND",
+  "BAPIRETURN",
+  "BAPISDITM",
+  "BAPISCHDL",
+  "BAPI_TRANSACTION_ROLLBACK",
+  "BAPI_PR_CHANGE",
+  "BAPI_REQUISITION_DELETE",
+  "BAPI_SALESORDER_CREATEFROMDAT2",
+  "BAPISDHD1",
+  "BAPIPARNR",
+  "BAPI_PO_CREATE1",
+  "BAPI_ACC_DOCUMENT_REV_POST",
+  "BAPI_ACC_DOCUMENT_POST",
+  "BAPI3007_2",
+  "BAPI_MATERIAL_GET_ALL",
+  "BAPIITEMIN",
+  "CONVERSION_EXIT_MATN1_INPUT"
+ ],
+ "nomes_para_ler_ddic": "FI_DOCUMENT_CHANGE,BAPIRET2,BAPI_TRANSACTION_COMMIT,BAPIMEREQITEMIMP,BAPIMEREQITEMX,BAPIEBAND,BAPIRETURN,BAPISDITM,BAPISCHDL,BAPI_TRANSACTION_ROLLBACK,BAPI_PR_CHANGE,BAPI_REQUISITION_DELETE,BAPI_SALESORDER_CREATEFROMDAT2,BAPISDHD1,BAPIPARNR,BAPI_PO_CREATE1,BAPI_ACC_DOCUMENT_REV_POST,BAPI_ACC_DOCUMENT_POST,BAPI3007_2,BAPI_MATERIAL_GET_ALL,BAPIITEMIN,CONVERSION_EXIT_MATN1_INPUT"
+}

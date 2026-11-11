@@ -1,0 +1,101 @@
+{
+ "cliente": "DEMO",
+ "csv_extracao": "/private/tmp/claude-501/-Users-neto-Downloads-MigNow---Documentos-Projetos-mignow-atc-process-main/6a3b8704-1ac1-4b4b-92b6-f08484b79ea0/scratchpad/exemption/gold/clientes/DEMO/extracoes/novos.csv",
+ "findings": [
+  {
+   "seq": 1,
+   "n": 1,
+   "itens_do_grupo": [
+    1
+   ],
+   "objeto": "ZACIC",
+   "tipo": "PROG",
+   "ref": "BAPI_SALESORDER_CREATEFROMDAT2",
+   "check": "CL_CI_TEST_X",
+   "msg": "Call of BAPI",
+   "include": "LZACICF02",
+   "linha": 535,
+   "marker_id": "atc:AAA,1,  X",
+   "origem": "finding_id",
+   "obs": "Triagem R5: BAPI ja corrigida",
+   "status_remediacao": "Isenção",
+   "aviso_escopo": ""
+  },
+  {
+   "seq": 2,
+   "n": 2,
+   "itens_do_grupo": [
+    2
+   ],
+   "objeto": "ZACIC",
+   "tipo": "PROG",
+   "ref": "BAPI_SALESORDER_CREATEFROMDAT2",
+   "check": "CL_CI_TEST_X",
+   "msg": "BAPI multi",
+   "include": "LZACICF02",
+   "linha": 535,
+   "marker_id": "atc:AAA2,10,  X",
+   "origem": "cruzamento",
+   "obs": "Triagem R5: dois findings",
+   "status_remediacao": "Isenção",
+   "aviso_escopo": ""
+  },
+  {
+   "seq": 3,
+   "n": 2,
+   "itens_do_grupo": [
+    2
+   ],
+   "objeto": "ZACIC",
+   "tipo": "PROG",
+   "ref": "BAPI_SALESORDER_CREATEFROMDAT2",
+   "check": "CL_CI_TEST_X",
+   "msg": "BAPI multi",
+   "include": "LZACICF02",
+   "linha": 974,
+   "marker_id": "atc:AAA3,11,  X",
+   "origem": "cruzamento",
+   "obs": "Triagem R5: dois findings",
+   "status_remediacao": "Isenção",
+   "aviso_escopo": ""
+  },
+  {
+   "seq": 4,
+   "n": 3,
+   "itens_do_grupo": [
+    3
+   ],
+   "objeto": "ZSYN",
+   "tipo": "PROG",
+   "ref": "",
+   "check": "CL_CI_TEST_X",
+   "msg": "Syntax error in program",
+   "include": "",
+   "linha": null,
+   "marker_id": "atc:BBB,2,  X",
+   "origem": "finding_id",
+   "obs": "",
+   "status_remediacao": "Isenção",
+   "aviso_escopo": "checksum -1"
+  },
+  {
+   "seq": 5,
+   "n": 9,
+   "itens_do_grupo": [
+    9
+   ],
+   "objeto": "ZOLDOBS",
+   "tipo": "PROG",
+   "ref": "KONV",
+   "check": "CL_CI_TEST_X",
+   "msg": "Antigo",
+   "include": "ZINC",
+   "linha": 7,
+   "marker_id": "atc:HHH,8,  X",
+   "origem": "cruzamento",
+   "obs": "solicitar isenção ATC",
+   "status_remediacao": "Confirmado KB",
+   "aviso_escopo": ""
+  }
+ ]
+}

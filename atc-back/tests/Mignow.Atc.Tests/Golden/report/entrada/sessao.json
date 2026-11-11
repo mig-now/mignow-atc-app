@@ -1,0 +1,136 @@
+{
+ "prioridades": [
+  "1"
+ ],
+ "itens": [
+  {
+   "n": 1,
+   "objeto": "ZA",
+   "tipo": "PROG",
+   "check": "S/4HANA: Check A",
+   "msg": "msg 1",
+   "ref": "MARA",
+   "status": "Confirmado KB",
+   "obs": "",
+   "data": "2026-10-21T10:00:00+00:00",
+   "historico_status": [
+    {
+     "data": "2026-10-21T10:00:00+00:00",
+     "status": "Confirmado KB"
+    }
+   ],
+   "aplicacao": {
+    "historico": [
+     {
+      "resultado": "ATIVADO",
+      "request": "GD1K900001"
+     }
+    ],
+    "objeto": "ZA"
+   },
+   "preparacao": {
+    "fonte": "ZA"
+   }
+  },
+  {
+   "n": 2,
+   "objeto": "ZA",
+   "tipo": "PROG",
+   "check": "S/4HANA: Check B",
+   "msg": "msg 2",
+   "ref": "MARA",
+   "status": "Confirmado IA",
+   "obs": "",
+   "data": "2026-10-21T10:01:00+00:00",
+   "historico_status": [
+    {
+     "data": "2026-10-21T10:01:00+00:00",
+     "status": "Confirmado IA"
+    }
+   ],
+   "aplicacao": {
+    "historico": [
+     {
+      "resultado": "ATIVADO",
+      "request": "GD1K900001"
+     }
+    ],
+    "objeto": "ZA"
+   },
+   "preparacao": {
+    "fonte": "ZA"
+   }
+  },
+  {
+   "n": 3,
+   "objeto": "ZCL_B",
+   "tipo": "CLAS",
+   "check": "S/4HANA: Check A",
+   "msg": "msg 3",
+   "ref": "MARA",
+   "status": "Confirmado IA",
+   "obs": "[APLICAÇÃO MANUAL: produto de terceiro]",
+   "data": "2026-10-21T10:02:00+00:00",
+   "historico_status": [
+    {
+     "data": "2026-10-21T10:02:00+00:00",
+     "status": "Confirmado IA"
+    }
+   ],
+   "aplicacao": {
+    "historico": [
+     {
+      "resultado": "ERRO_ATIVACAO",
+      "request": "GD1K900001"
+     }
+    ]
+   }
+  },
+  {
+   "n": 4,
+   "objeto": "ZT",
+   "tipo": "TABL",
+   "check": "S/4HANA: Check C",
+   "msg": "msg 4",
+   "ref": "MARA",
+   "status": "Isenção",
+   "obs": "",
+   "data": "2026-10-21T10:03:00+00:00",
+   "historico_status": [
+    {
+     "data": "2026-10-21T10:03:00+00:00",
+     "status": "Isenção"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "objeto": "ZC",
+   "tipo": "PROG",
+   "check": "S/4HANA: Check C",
+   "msg": "msg 5",
+   "ref": "MARA",
+   "status": "Isenção",
+   "obs": "",
+   "data": "2026-10-21T10:04:00+00:00",
+   "historico_status": [
+    {
+     "data": "2026-10-21T10:04:00+00:00",
+     "status": "Isenção"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "objeto": "ZD",
+   "tipo": "PROG",
+   "check": "S/4HANA: Check A",
+   "msg": "msg 6",
+   "ref": "MARA",
+   "status": "",
+   "obs": "",
+   "data": "",
+   "historico_status": []
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Mignow.Atc.Domain</RootNamespace>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,32 @@
+[
+ {
+  "inicio_utc": "2026-10-21T10:00:00+00:00",
+  "fim_utc": "2026-10-21T10:06:00+00:00",
+  "tempo_s": 360,
+  "tempo_liquido_s": 360,
+  "versao_skill": "1.20",
+  "antes": {
+   "KB": 0,
+   "IA": 0,
+   "Isenção": 0,
+   "Cancelado": 0,
+   "Pendente": 6,
+   "objetos_pendentes": 5
+  },
+  "depois": {
+   "KB": 1,
+   "IA": 2,
+   "Isenção": 2,
+   "Cancelado": 0,
+   "Pendente": 1,
+   "objetos_pendentes": 1
+  },
+  "tokens_detalhe": {
+   "total": 5000,
+   "output_tokens": 500,
+   "cache_read_input_tokens": 0,
+   "input_tokens": 4500,
+   "cache_creation_input_tokens": 0
+  }
+ }
+]

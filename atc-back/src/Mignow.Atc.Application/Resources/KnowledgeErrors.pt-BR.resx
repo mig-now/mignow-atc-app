@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <!-- Marcador do módulo Knowledge: chaves <Código> só deste módulo, nos 3 idiomas (procuradas pelo ErrorText). -->
+  <data name="Knowledge.ElementNotFound" xml:space="preserve"><value>Elemento não encontrado na KB.</value></data>
+  <data name="Knowledge.InvalidCategory" xml:space="preserve"><value>Categoria inválida (tabelas, funcoes, classes, tipos, transacoes, programas).</value></data>
+  <data name="Knowledge.ElementRequired" xml:space="preserve"><value>O elemento é obrigatório.</value></data>
+  <data name="Knowledge.FactRequired" xml:space="preserve"><value>O fato é obrigatório.</value></data>
+  <data name="Knowledge.KbNotFound" xml:space="preserve"><value>Pasta da KB não encontrada. Confira o caminho da KB nas configurações.</value></data>
+  <data name="Knowledge.LockTimeout" xml:space="preserve"><value>Tempo esgotado aguardando a trava de escrita da KB (outra gravação em andamento).</value></data>
+</root>

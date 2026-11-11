@@ -1,0 +1,13 @@
+[
+ {
+  "seq": 1,
+  "resultado": "SIMULADO",
+  "motivo": "FPOS"
+ },
+ {
+  "seq": 2,
+  "resultado": "SEM_ESCOPO",
+  "motivo": "FPOS",
+  "mensagem": "checksum -1"
+ }
+]

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <!-- Marcador do módulo Report: chaves <Código> só deste módulo, nos 3 idiomas (procuradas pelo ErrorText). -->
+  <data name="Report.SystemNotFound" xml:space="preserve"><value>Environment not found for this customer.</value></data>
+  <data name="Report.NoSession" xml:space="preserve"><value>The customer has no remediation session yet: nothing to report.</value></data>
+  <data name="Report.NoExemption" xml:space="preserve"><value>The environment has no exemption batch yet.</value></data>
+  <data name="Report.NoScan" xml:space="preserve"><value>The environment has no MIGNOW scan yet.</value></data>
+  <data name="Report.InvalidView" xml:space="preserve"><value>Invalid view: use findings or objetos.</value></data>
+  <data name="Report.InvalidAnalysis" xml:space="preserve"><value>Invalid analysis: use isencao, pendencias or mignow.</value></data>
+  <data name="Report.InvalidModule" xml:space="preserve"><value>Invalid module: use extraction, remediation, exemption or scan.</value></data>
+  <data name="Report.HistoryFilterRequired" xml:space="preserve"><value>Provide the customer or the environment.</value></data>
+  <data name="Report.TooManyHighlights" xml:space="preserve"><value>At most 50 items per list.</value></data>
+  <data name="ReportHighlights.CustomerRequired" xml:space="preserve"><value>The highlights belong to a customer.</value></data>
+  <data name="ReportHighlights.TextRequired" xml:space="preserve"><value>The text is required (up to 2000 characters).</value></data>
+  <data name="ReportHighlights.TitleRequired" xml:space="preserve"><value>The title is required (up to 200 characters).</value></data>
+  <data name="ReportHighlights.InvalidPremise" xml:space="preserve"><value>Premises out of range (objects/day ≥ 1, hours/day between 1 and 24).</value></data>
+</root>

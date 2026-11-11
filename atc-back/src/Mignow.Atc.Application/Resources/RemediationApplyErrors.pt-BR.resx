@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <!-- Marcador do módulo Remediation: chaves <Código> só deste módulo, nos 3 idiomas (procuradas pelo ErrorText). -->
+  <data name="Apply.Propose.NoSource" xml:space="preserve"><value>Fonte do item não lido (ou DDIC sem código): tratar na sessão principal / leia os fontes antes.</value></data>
+  <data name="Apply.Propose.NoKbSolution" xml:space="preserve"><value>Sem solução na KB para este objeto: use a Análise da IA (mode=ia) ou cancele.</value></data>
+  <data name="Apply.Propose.AiFailed" xml:space="preserve"><value>A IA não devolveu proposta ({0}).</value></data>
+  <data name="Apply.Propose.AiMissing" xml:space="preserve"><value>A IA não devolveu proposta para este item.</value></data>
+  <data name="Apply.Propose.SameBlock" xml:space="preserve"><value>mesmo bloco do item {0}</value></data>
+  <data name="Apply.Propose.NoPatches" xml:space="preserve"><value>Correção sem trechos: nada a aplicar.</value></data>
+  <data name="Apply.Propose.PatchFailed" xml:space="preserve"><value>Os trechos propostos não se aplicam ao fonte ({0} {1}): o trecho atual precisa aparecer exatamente uma vez.</value></data>
+  <data name="Apply.Propose.RelatedNoSource" xml:space="preserve"><value>Objeto relacionado {0} sem fonte lido.</value></data>
+  <data name="Apply.Propose.SyntaxUnavailable" xml:space="preserve"><value>Verificação de sintaxe indisponível ({0}).</value></data>
+  <data name="Apply.AutoModeRequired" xml:space="preserve"><value>A confirmação automática exige a sessão em modo sem confirmação.</value></data>
+  <data name="Apply.RequestRequired" xml:space="preserve"><value>Request de transporte da sessão não definida.</value></data>
+  <data name="Apply.ItemNotReady" xml:space="preserve"><value>Item {0} sem decisão Confirmado KB/IA ou sem proposta preparada.</value></data>
+  <data name="Apply.NotReady" xml:space="preserve"><value>Item sem proposta de correção preparada ou sem decisão Confirmado KB/IA.</value></data>
+  <data name="Apply.AlreadyApplied" xml:space="preserve"><value>Item já aplicado e ativado.</value></data>
+  <data name="Apply.NoBackup" xml:space="preserve"><value>Backup do item não encontrado.</value></data>
+  <data name="Apply.RelatedNoCache" xml:space="preserve"><value>Fonte do objeto relacionado {0} não está lido.</value></data>
+  <data name="Apply.NoCache" xml:space="preserve"><value>Fonte {0} não está lido no ambiente.</value></data>
+  <data name="Apply.ReadActiveFailed" xml:space="preserve"><value>Leitura do fonte ativo falhou ({0}).</value></data>
+  <data name="Apply.SourceChanged" xml:space="preserve"><value>O fonte ativo no sistema difere do lido na preparação; releia o fonte e proponha de novo.</value></data>
+  <data name="Apply.PreparationError" xml:space="preserve"><value>Não foi possível montar o fonte novo ({0} {1}).</value></data>
+  <data name="Apply.BlockAlreadyPresent" xml:space="preserve"><value>O bloco já está no fonte (item do mesmo bloco já aplicado).</value></data>
+  <data name="Apply.RollbackUnavailable" xml:space="preserve"><value>O objeto foi criado por esta aplicação (não havia versão anterior); apague-o na SE11 se necessário.</value></data>
+  <data name="Apply.TableStructure" xml:space="preserve"><value>A tabela mudaria campos/ordem/chave (pode exigir conversão na SE14): atuais {0}; novos {1}. Só com aval do consultor.</value></data>
+  <data name="Apply.DdicCreateData" xml:space="preserve"><value>Objeto inexistente: informe pacote e descrição para criar.</value></data>
+  <data name="Apply.NoActivationError" xml:space="preserve"><value>O item {0} não está com erro de ativação.</value></data>
+  <data name="Apply.Decision.NoProposal" xml:space="preserve"><value>Item {0} sem proposta de correção preparada.</value></data>
+  <data name="Apply.Decision.AlreadyApplied" xml:space="preserve"><value>Item {0} já aplicado no SAP.</value></data>
+  <data name="Apply.Decision.NotKb" xml:space="preserve"><value>A proposta do item {0} não é da KB (use ConfirmIa).</value></data>
+  <data name="Apply.Decision.NotAi" xml:space="preserve"><value>A proposta do item {0} não é da IA (use ConfirmKb).</value></data>
+  <data name="Apply.Decision.NoReference" xml:space="preserve"><value>Item {0} sem objeto referenciado: não é possível registrar a contribuição na KB.</value></data>
+  <data name="Apply.Marker.InvalidKind" xml:space="preserve"><value>Tipo de bloco inválido: {0}.</value></data>
+  <data name="Apply.Marker.BeforeRequired" xml:space="preserve"><value>O código atual é obrigatório para {0}.</value></data>
+  <data name="Apply.Marker.AfterRequired" xml:space="preserve"><value>O código novo é obrigatório para {0}.</value></data>
+  <data name="Apply.Patch.NotUnique" xml:space="preserve"><value>O trecho atual precisa aparecer exatamente 1 vez no fonte (ocorrências: {0}).</value></data>
+  <data name="Apply.Patch.Overlap" xml:space="preserve"><value>Trechos sobrepostos nas linhas {0}.</value></data>
+  <data name="Apply.Patch.Empty" xml:space="preserve"><value>Nenhum trecho a aplicar.</value></data>
+  <data name="Apply.Propose.Done" xml:space="preserve"><value>Propostas prontas: {0} itens ({1} a corrigir, {2} pendentes).</value></data>
+  <data name="Apply.Propose.NothingSelected" xml:space="preserve"><value>Nenhum item selecionado para proposta.</value></data>
+  <data name="Apply.Review.Done" xml:space="preserve"><value>Revisão por IA concluída para {0} itens.</value></data>
+  <data name="Apply.AutoConfirm.Done" xml:space="preserve"><value>{0} itens confirmados automaticamente, {1} ficaram para o consultor.</value></data>
+  <data name="Apply.Simulate.Done" xml:space="preserve"><value>Simulação da aplicação concluída: {1} de {0} itens simulados.</value></data>
+  <data name="Apply.Apply.Done" xml:space="preserve"><value>Aplicação concluída: {1} de {0} itens ativados.</value></data>
+  <data name="Apply.Rollback.Done" xml:space="preserve"><value>Rollback concluído com o resultado {0}.</value></data>
+  <data name="Apply.BatchReport.Done" xml:space="preserve"><value>Relatório do lote gerado.</value></data>
+  <data name="AutoRemediation.NothingPending" xml:space="preserve"><value>Nenhum item pendente nem com erro de gravação no SAP entre os escolhidos.</value></data>
+  <data name="AutoRemediation.TriageApplied" xml:space="preserve"><value>Triagem automática: {0} itens classificados ({1}).</value></data>
+  <data name="AutoRemediation.NothingForAi" xml:space="preserve"><value>Todos os itens escolhidos já têm correção ou decisão: nada para a IA.</value></data>
+  <data name="AutoRemediation.Confirmed" xml:space="preserve"><value>{0} confirmados pela base de conhecimento e {1} pela IA automaticamente; {2} ficaram para o consultor.</value></data>
+  <data name="AutoRemediation.Done" xml:space="preserve"><value>Remediação automática concluída: {0} itens, {1} ativados no SAP, {2} pendentes para o consultor.</value></data>
+</root>

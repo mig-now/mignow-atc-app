@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Session.NotFound" xml:space="preserve"><value>Sesión de remediación no encontrada.</value></data>
+  <data name="Session.ItemNotFound" xml:space="preserve"><value>Ítem no encontrado en la sesión.</value></data>
+  <data name="Session.Archived" xml:space="preserve"><value>La sesión está archivada (ciclo anterior) y no puede modificarse.</value></data>
+  <data name="Session.CsvColumnsMissing" xml:space="preserve"><value>El CSV necesita las columnas 'Object name' y 'Obj.'.</value></data>
+  <data name="Session.CsvPriorityColumnMissing" xml:space="preserve"><value>Se pidieron prioridades, pero el CSV no tiene la columna 'Priority'.</value></data>
+  <data name="Session.CsvEmpty" xml:space="preserve"><value>El CSV está vacío.</value></data>
+  <data name="Session.InvalidStatusFilter" xml:space="preserve"><value>Filtro de estado no válido.</value></data>
+  <data name="Session.ReuseOtherSystem" xml:space="preserve"><value>La reutilización exige otra sesión del mismo sistema SAP.</value></data>
+  <data name="Triage.UnknownRule" xml:space="preserve"><value>Regla de triaje desconocida: {0} (válidas: {1}).</value></data>
+  <data name="Remediation.StandardNotRead" xml:space="preserve"><value>Objeto standard {0} {1} ({2} ítems) no leído: confirme y ejecute de nuevo con includeStandard.</value></data>
+  <data name="Remediation.ReadSourceFailed" xml:space="preserve"><value>Error al leer {0} {1}: {2}</value></data>
+  <data name="Remediation.ObjectNotFound" xml:space="preserve"><value>Objeto {0} {1} no encontrado en SAP.</value></data>
+  <data name="Remediation.ReadSourcesPlanned" xml:space="preserve"><value>{0} objetos por leer para {1} ítems.</value></data>
+  <data name="Remediation.ReadSourcesNoPlan" xml:space="preserve"><value>Falta el plan de lectura (ejecute de nuevo).</value></data>
+  <data name="Remediation.ReadSourcesDone" xml:space="preserve"><value>{0} objetos: {1} leídos, {2} en caché, {3} no encontrados, {4} con error.</value></data>
+  <data name="Remediation.ConfirmR1Checked" xml:space="preserve"><value>Verificación de R1 hecha para {0} ítems.</value></data>
+  <data name="Remediation.ConfirmR1Applied" xml:space="preserve"><value>Verificación de R1 aplicada a {0} ítems.</value></data>
+  <data name="Remediation.ConfirmR1NotApplied" xml:space="preserve"><value>Verificación de R1 no aplicada (solo propuesta).</value></data>
+  <data name="Remediation.Step.READ_SOURCES_PLAN" xml:space="preserve"><value>Seleccionar objetos</value></data>
+  <data name="Item.NotFound" xml:space="preserve"><value>Ítem no encontrado.</value></data>
+  <data name="TriageRule.NotFound" xml:space="preserve"><value>Regla de triaje no encontrada.</value></data>
+  <data name="TriageRule.CodeExists" xml:space="preserve"><value>La regla de triaje {0} ya existe.</value></data>
+  <data name="TriageRule.BuiltInCannotDelete" xml:space="preserve"><value>{0} es una regla estándar: no se puede eliminar, desactívela.</value></data>
+  <data name="TriageRule.CriteriaRequired" xml:space="preserve"><value>Informe al menos un criterio: objetos referenciados, nombre del objeto o texto del check/mensaje.</value></data>
+  <data name="TriageRule.RefObjectsRequired" xml:space="preserve"><value>La regla {0} necesita al menos un objeto referenciado.</value></data>
+  <data name="TriageRule.CodeRequired" xml:space="preserve"><value>Código de la regla obligatorio.</value></data>
+  <data name="TriageRule.DescriptionRequired" xml:space="preserve"><value>Descripción de la regla obligatoria.</value></data>
+  <data name="TriageRule.InvalidEffect" xml:space="preserve"><value>Efecto de la regla inválido.</value></data>
+  <data name="TriageRule.BuiltInCriteria" xml:space="preserve"><value>Regla estándar: el efecto queda en el código.</value></data>
+  <data name="TriageRule.UnknownParameter" xml:space="preserve"><value>Parámetro desconocido: {0} (válidos: {1}).</value></data>
+  <data name="TriageRule.ParameterRequired" xml:space="preserve"><value>El parámetro {0} necesita al menos un valor.</value></data>
+  <data name="Source.NotFound" xml:space="preserve"><value>Fuente no encontrada en esta sesión.</value></data>
+</root>

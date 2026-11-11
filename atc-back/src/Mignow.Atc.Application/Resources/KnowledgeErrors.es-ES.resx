@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <!-- Marcador do módulo Knowledge: chaves <Código> só deste módulo, nos 3 idiomas (procuradas pelo ErrorText). -->
+  <data name="Knowledge.ElementNotFound" xml:space="preserve"><value>Elemento no encontrado en la KB.</value></data>
+  <data name="Knowledge.InvalidCategory" xml:space="preserve"><value>Categoría inválida (tabelas, funcoes, classes, tipos, transacoes, programas).</value></data>
+  <data name="Knowledge.ElementRequired" xml:space="preserve"><value>El elemento es obligatorio.</value></data>
+  <data name="Knowledge.FactRequired" xml:space="preserve"><value>El hecho es obligatorio.</value></data>
+  <data name="Knowledge.KbNotFound" xml:space="preserve"><value>Carpeta de la KB no encontrada. Revise la ruta de la KB en la configuración.</value></data>
+  <data name="Knowledge.LockTimeout" xml:space="preserve"><value>Tiempo agotado esperando el bloqueo de escritura de la KB (otra escritura en curso).</value></data>
+</root>

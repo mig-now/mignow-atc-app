@@ -1,0 +1,16 @@
+[
+ {
+  "lote": "lote_20261022-090000",
+  "inicio_utc": "2026-10-22T09:00:00+00:00",
+  "fim_utc": "2026-10-22T09:02:00+00:00",
+  "tempo_s": 120,
+  "tempo_liquido_s": 120,
+  "tokens_detalhe": {
+   "total": 700,
+   "output_tokens": 70,
+   "cache_read_input_tokens": 0,
+   "input_tokens": 630,
+   "cache_creation_input_tokens": 0
+  }
+ }
+]

@@ -1,0 +1,5 @@
+﻿"obj_type";"obj_name";"obj_packageName";"tadir_author";"priority";"checkTitle";"messageTitle";"quickfixInfo";"tag_ADD_INFO";"tag_CHANGE_CATEGORY";"tag_NOTE";"tag_REF_OBJ_NAME";"tag_REF_OBJ_TYPE";"tag_SITEM_STATE";"change_category_text";"note_short_text";"itm_created_on_utc";"baseline_effect"
+"PROG";"ZMIG_SD_PRICING";"ZMIGFIX_TEST";"DEVELOPER";"1";"S/4HANA Readiness";"KONV is not a table; use PRCD_ELEMENTS";"MK0123456789AB";"add;info";"1";"0002385939";"KONV";"TABL";"NEW";"Simplification";"Note 2385939 title";"20261020120000";""
+"CLAS";"ZCL_MIG";"ZMIGFIX_TEST";"";"2";"Field Length";"Material ""extended""
+to 40";"MK0123456789AC";"";"";"0000000042";"MATNR";"DTEL";"";"";"";"2026102";""
+"PROG";"ZMIG_X";"$TMP";"DEV2";"3";"Performance";"SELECT * reads all";"";"";"2";"";"";"";"";"Cat two";"";"";""

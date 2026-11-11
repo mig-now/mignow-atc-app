@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <!-- Marcador do módulo Report: chaves <Código> só deste módulo, nos 3 idiomas (procuradas pelo ErrorText). -->
+  <data name="Report.SystemNotFound" xml:space="preserve"><value>Ambiente não encontrado para este cliente.</value></data>
+  <data name="Report.NoSession" xml:space="preserve"><value>O cliente ainda não tem sessão de remediação: não há o que relatar.</value></data>
+  <data name="Report.NoExemption" xml:space="preserve"><value>O ambiente ainda não tem lote de isenção.</value></data>
+  <data name="Report.NoScan" xml:space="preserve"><value>O ambiente ainda não tem varredura MIGNOW.</value></data>
+  <data name="Report.InvalidView" xml:space="preserve"><value>Visão inválida: use findings ou objetos.</value></data>
+  <data name="Report.InvalidAnalysis" xml:space="preserve"><value>Análise inválida: use isencao, pendencias ou mignow.</value></data>
+  <data name="Report.InvalidModule" xml:space="preserve"><value>Módulo inválido: use extraction, remediation, exemption ou scan.</value></data>
+  <data name="Report.HistoryFilterRequired" xml:space="preserve"><value>Informe o cliente ou o ambiente.</value></data>
+  <data name="Report.TooManyHighlights" xml:space="preserve"><value>No máximo 50 itens por lista.</value></data>
+  <data name="ReportHighlights.CustomerRequired" xml:space="preserve"><value>Os complementos pertencem a um cliente.</value></data>
+  <data name="ReportHighlights.TextRequired" xml:space="preserve"><value>O texto é obrigatório (até 2000 caracteres).</value></data>
+  <data name="ReportHighlights.TitleRequired" xml:space="preserve"><value>O título é obrigatório (até 200 caracteres).</value></data>
+  <data name="ReportHighlights.InvalidPremise" xml:space="preserve"><value>Premissas fora da faixa (objetos/dia ≥ 1, horas/dia entre 1 e 24).</value></data>
+</root>

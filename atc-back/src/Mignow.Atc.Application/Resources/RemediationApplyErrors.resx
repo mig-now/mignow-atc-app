@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <!-- Marcador do módulo Remediation: chaves <Código> só deste módulo, nos 3 idiomas (procuradas pelo ErrorText). -->
+  <data name="Apply.Propose.NoSource" xml:space="preserve"><value>Source of the item not read (or DDIC without code): handle in the main session / read the sources first.</value></data>
+  <data name="Apply.Propose.NoKbSolution" xml:space="preserve"><value>No KB solution for this object: use the AI analysis (mode=ia) or cancel.</value></data>
+  <data name="Apply.Propose.AiFailed" xml:space="preserve"><value>The AI returned no proposal ({0}).</value></data>
+  <data name="Apply.Propose.AiMissing" xml:space="preserve"><value>The AI returned no proposal for this item.</value></data>
+  <data name="Apply.Propose.SameBlock" xml:space="preserve"><value>same block as item {0}</value></data>
+  <data name="Apply.Propose.NoPatches" xml:space="preserve"><value>Fix without snippets: nothing to apply.</value></data>
+  <data name="Apply.Propose.PatchFailed" xml:space="preserve"><value>The proposed snippets do not apply to the source ({0} {1}): the current snippet must appear exactly once.</value></data>
+  <data name="Apply.Propose.RelatedNoSource" xml:space="preserve"><value>Related object {0} has no source read.</value></data>
+  <data name="Apply.Propose.SyntaxUnavailable" xml:space="preserve"><value>Syntax check unavailable ({0}).</value></data>
+  <data name="Apply.AutoModeRequired" xml:space="preserve"><value>Automatic confirmation requires the session in no-confirmation mode.</value></data>
+  <data name="Apply.RequestRequired" xml:space="preserve"><value>The session transport request is not set.</value></data>
+  <data name="Apply.ItemNotReady" xml:space="preserve"><value>Item {0} has no Confirmed KB/AI decision or no prepared proposal.</value></data>
+  <data name="Apply.NotReady" xml:space="preserve"><value>Item without a prepared fix or without a Confirmed KB/AI decision.</value></data>
+  <data name="Apply.AlreadyApplied" xml:space="preserve"><value>Item already applied and activated.</value></data>
+  <data name="Apply.NoBackup" xml:space="preserve"><value>Item backup not found.</value></data>
+  <data name="Apply.RelatedNoCache" xml:space="preserve"><value>Source of related object {0} has not been read.</value></data>
+  <data name="Apply.NoCache" xml:space="preserve"><value>Source {0} has not been read in the system.</value></data>
+  <data name="Apply.ReadActiveFailed" xml:space="preserve"><value>Reading the active source failed ({0}).</value></data>
+  <data name="Apply.SourceChanged" xml:space="preserve"><value>The active source in the system differs from the one read at preparation; re-read the source and propose again.</value></data>
+  <data name="Apply.PreparationError" xml:space="preserve"><value>Could not build the new source ({0} {1}).</value></data>
+  <data name="Apply.BlockAlreadyPresent" xml:space="preserve"><value>The block is already in the source (item of the same block already applied).</value></data>
+  <data name="Apply.RollbackUnavailable" xml:space="preserve"><value>The object was created by this application (no previous version); delete it in SE11 if needed.</value></data>
+  <data name="Apply.TableStructure" xml:space="preserve"><value>The table would change fields/order/key (may require SE14 conversion): current {0}; new {1}. Only with the consultant's approval.</value></data>
+  <data name="Apply.DdicCreateData" xml:space="preserve"><value>Object does not exist: provide package and description to create it.</value></data>
+  <data name="Apply.NoActivationError" xml:space="preserve"><value>Item {0} has no activation error.</value></data>
+  <data name="Apply.Decision.NoProposal" xml:space="preserve"><value>Item {0} has no prepared fix proposal.</value></data>
+  <data name="Apply.Decision.AlreadyApplied" xml:space="preserve"><value>Item {0} already applied in SAP.</value></data>
+  <data name="Apply.Decision.NotKb" xml:space="preserve"><value>The proposal of item {0} is not from the KB (use ConfirmIa).</value></data>
+  <data name="Apply.Decision.NotAi" xml:space="preserve"><value>The proposal of item {0} is not from the AI (use ConfirmKb).</value></data>
+  <data name="Apply.Decision.NoReference" xml:space="preserve"><value>Item {0} has no referenced object: cannot register the KB contribution.</value></data>
+  <data name="Apply.Marker.InvalidKind" xml:space="preserve"><value>Invalid block kind: {0}.</value></data>
+  <data name="Apply.Marker.BeforeRequired" xml:space="preserve"><value>Current code is required for {0}.</value></data>
+  <data name="Apply.Marker.AfterRequired" xml:space="preserve"><value>New code is required for {0}.</value></data>
+  <data name="Apply.Patch.NotUnique" xml:space="preserve"><value>The current snippet must appear exactly once in the source (occurrences: {0}).</value></data>
+  <data name="Apply.Patch.Overlap" xml:space="preserve"><value>Overlapping snippets at lines {0}.</value></data>
+  <data name="Apply.Patch.Empty" xml:space="preserve"><value>No snippet to apply.</value></data>
+  <data name="Apply.Propose.Done" xml:space="preserve"><value>Proposals ready: {0} items ({1} to fix, {2} pending).</value></data>
+  <data name="Apply.Propose.NothingSelected" xml:space="preserve"><value>No item selected for proposal.</value></data>
+  <data name="Apply.Review.Done" xml:space="preserve"><value>AI review done for {0} items.</value></data>
+  <data name="Apply.AutoConfirm.Done" xml:space="preserve"><value>{0} items confirmed automatically, {1} left for the consultant.</value></data>
+  <data name="Apply.Simulate.Done" xml:space="preserve"><value>Apply simulation done: {1} of {0} items simulated.</value></data>
+  <data name="Apply.Apply.Done" xml:space="preserve"><value>Apply done: {1} of {0} items activated.</value></data>
+  <data name="Apply.Rollback.Done" xml:space="preserve"><value>Rollback finished with result {0}.</value></data>
+  <data name="Apply.BatchReport.Done" xml:space="preserve"><value>Batch report generated.</value></data>
+  <data name="AutoRemediation.NothingPending" xml:space="preserve"><value>No pending item and no item with an SAP write error among the selected ones.</value></data>
+  <data name="AutoRemediation.TriageApplied" xml:space="preserve"><value>Automatic triage: {0} items classified ({1}).</value></data>
+  <data name="AutoRemediation.NothingForAi" xml:space="preserve"><value>Every selected item already has a correction or a decision: nothing for the AI.</value></data>
+  <data name="AutoRemediation.Confirmed" xml:space="preserve"><value>{0} confirmed from the knowledge base and {1} from the AI automatically; {2} left for the consultant.</value></data>
+  <data name="AutoRemediation.Done" xml:space="preserve"><value>Automatic remediation finished: {0} items, {1} activated in SAP, {2} pending for the consultant.</value></data>
+</root>

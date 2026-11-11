@@ -1,0 +1,9 @@
+L	002	2
+H	CLAS	ZCL_A	oo/classes/zcl_a	100	101	REGEX_001	VBUK	P	SELECT * FROM VBUK
+H	CLAS	ZCL_A	oo/classes/zcl_a#include=zcl_a=============cu	3	3	REGEX_001	VBUK	P	SELECT * FROM VBUK
+H	FUGR	ZFG	functions/groups/zfg/fmodules/zfm1	7	8	REGEX_002	KONV	P	SELECT * FROM KONV
+H	FUGR	ZFG	functions/groups/zfg/includes/lzfgf01	2	2	REGEX_005	XK01	P	CALL TRANSACTION 'XK01'
+F	CLAS	ZCL_A	4	300
+F	FUGR	ZFG	3	200
+O	CLAS	ZCL_A	oo/classes/zcl_a	REGEX_001	1
+Z	002	2	900	1

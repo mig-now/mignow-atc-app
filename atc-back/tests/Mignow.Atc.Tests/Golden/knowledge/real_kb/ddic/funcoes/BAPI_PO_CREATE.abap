@@ -1,0 +1,1 @@
+* ddic stub

@@ -1,0 +1,3 @@
+REPORT zprog_j.
+CALL FUNCTION 'ZFM_X'
+  EXPORTING a = 1.

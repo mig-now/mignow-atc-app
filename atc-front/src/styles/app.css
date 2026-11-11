@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@import "./tokens.css"; /* PROVISÓRIO: trocar pelo @mig-now/ds (ver tokens.css) */
+@import "./theme.css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --grad-brand: linear-gradient(118deg, #42b6fe 0%, #7a74ff 52%, #a245ff 100%);
+}
+
+.light {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* ⚠️ GOTCHA: foco em degradê — DEVE ficar SEM @layer (as utilitárias do Tailwind venceriam). */
+.field-focus:focus,
+.field-focus:focus-visible {
+  outline: none;
+  border-color: transparent;
+  background:
+    linear-gradient(var(--background), var(--background)) padding-box,
+    var(--grad-brand) border-box;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 18%, transparent);
+}
+.field-focus[aria-invalid="true"]:focus,
+.field-focus[aria-invalid="true"]:focus-visible {
+  border-color: var(--destructive);
+  background: var(--background);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--destructive) 22%, transparent);
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border: 3px solid transparent;
+  border-radius: 9999px;
+  background-clip: padding-box;
+}
+
+/* Documentação .md dos objetos */
+.prose-md h1 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+.prose-md h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0 0.4rem;
+}
+.prose-md p,
+.prose-md ul {
+  margin: 0.4rem 0;
+}
+.prose-md ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.prose-md code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--muted);
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
+.prose-md pre {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background: var(--muted);
+  padding: 0.75rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.prose-md pre code {
+  background: transparent;
+  padding: 0;
+}

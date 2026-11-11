@@ -1,0 +1,58 @@
+{
+ "ok": true,
+ "itens": 14,
+ "por_tipo": {
+  "PROG": 13,
+  "TABL": 1
+ },
+ "objetos_distintos": 14,
+ "prioridades": [
+  "1",
+  "2"
+ ],
+ "por_prioridade_csv": {
+  "1": 13,
+  "2": 1,
+  "3": 1
+ },
+ "fora_do_escopo": 1,
+ "ja_tratados": 0,
+ "linhas_com_colunas_deslocadas": 1,
+ "amostra": [
+  {
+   "n": 1,
+   "objeto": "ZPROG_A",
+   "tipo": "PROG",
+   "robt": "TABL",
+   "ref": "KONV"
+  },
+  {
+   "n": 2,
+   "objeto": "ZPROG_B",
+   "tipo": "PROG",
+   "robt": "TABL",
+   "ref": "VBUK"
+  },
+  {
+   "n": 3,
+   "objeto": "ZPROG_C",
+   "tipo": "PROG",
+   "robt": "TABL",
+   "ref": "MKPF"
+  },
+  {
+   "n": 4,
+   "objeto": "ZPROG_D",
+   "tipo": "PROG",
+   "robt": "TRAN",
+   "ref": "ME53"
+  },
+  {
+   "n": 5,
+   "objeto": "ZPROG_E",
+   "tipo": "PROG",
+   "robt": "FUNC",
+   "ref": "BAPI_MATERIAL_SAVEDATA"
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+[
+ {
+  "n": 1,
+  "objeto": "ZPROG_A",
+  "status": "",
+  "obs": ""
+ },
+ {
+  "n": 2,
+  "objeto": "ZPROG_B",
+  "status": "Confirmado KB",
+  "obs": "Triagem R2: já corrigido no sistema (uso só em bloco DELETION: ZPROG_B:3)"
+ },
+ {
+  "n": 3,
+  "objeto": "ZPROG_C",
+  "status": "",
+  "obs": ""
+ },
+ {
+  "n": 4,
+  "objeto": "ZPROG_D",
+  "status": "",
+  "obs": ""
+ },
+ {
+  "n": 5,
+  "objeto": "ZPROG_E",
+  "status": "Isenção",
+  "obs": "Triagem R5: já corrigido (MATERIAL_LONG em todas as chamadas); o check marca qualquer chamada da BAPI – solicitar isenção ATC (falso positivo)"
+ },
+ {
+  "n": 6,
+  "objeto": "SAPMV45A",
+  "status": "",
+  "obs": ""
+ },
+ {
+  "n": 7,
+  "objeto": "ZPROG_F",
+  "status": "Isenção",
+  "obs": "Triagem R7: BSEG – pendente para o funcional (avaliação de negócio; sem correção técnica nesta remediação)"
+ },
+ {
+  "n": 8,
+  "objeto": "ZPROG_G",
+  "status": "Isenção",
+  "obs": "Out Of Scope - Analise do Cliente"
+ },
+ {
+  "n": 9,
+  "objeto": "ZTABLE_H",
+  "status": "Cancelado",
+  "obs": "Triagem R1: objeto sem código ABAP, finding Ambiguous (confirmar na SE11)"
+ },
+ {
+  "n": 10,
+  "objeto": "ZGFSCM_MIG_CREDITO",
+  "status": "Cancelado",
+  "obs": "Triagem MIGNOW_FSCM_PRODUCT: objeto do produto MIGNOW (Objetos do produto MIGNOW de migração para FSCM Credit Management) – finding ignorado"
+ },
+ {
+  "n": 11,
+  "objeto": "ZPROG_I",
+  "status": "",
+  "obs": ""
+ },
+ {
+  "n": 13,
+  "objeto": "ZPROG_J",
+  "status": "",
+  "obs": ""
+ },
+ {
+  "n": 14,
+  "objeto": "ZPROG_K",
+  "status": "",
+  "obs": ""
+ },
+ {
+  "n": 15,
+  "objeto": "ZPROG_L",
+  "status": "",
+  "obs": ""
+ }
+]

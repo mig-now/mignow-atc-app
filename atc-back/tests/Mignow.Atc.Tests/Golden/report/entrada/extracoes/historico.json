@@ -1,0 +1,25 @@
+[
+ {
+  "inicio_utc": "2026-10-20T09:50:00+00:00",
+  "fim_utc": "2026-10-20T10:00:00+00:00",
+  "tempo_s": 600,
+  "tempo_liquido_s": 600,
+  "situacao": "extraida",
+  "display_id": "D1",
+  "serie": "ZMIG_GOLD",
+  "executada_utc": "20261020100000",
+  "qtde_total": 100,
+  "qtde_em_baseline": 40,
+  "qtde_com_baseline": 60,
+  "com_baseline_p1": 6,
+  "com_baseline_p2": 30,
+  "com_baseline_p3": 24,
+  "tokens_detalhe": {
+   "total": 1000,
+   "output_tokens": 100,
+   "cache_read_input_tokens": 0,
+   "input_tokens": 900,
+   "cache_creation_input_tokens": 0
+  }
+ }
+]

@@ -1,0 +1,7 @@
+﻿priority;location;tag_REF_OBJ_NAME;checkTitle
+1;/sap/bc/adt/programs/programs/zprog1/source/main#start=11,0;VBUK;t
+1;/sap/bc/adt/programs/programs/zprog1/source/main#start=99,0;KONV;t
+1;/sap/bc/adt/programs/includes/zinc/source/main#start=1,0;XYZ;t
+1;/sap/bc/adt/oo/classes/zcl_a/source/main#start=100,0;VBUK;t
+1;;SEM_LOCATION;t
+2;/sap/bc/adt/programs/programs/zbad/source/main;VBUK;t

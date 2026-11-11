@@ -1,0 +1,32 @@
+[
+ {
+  "op": "registrar",
+  "categoria": "funcoes",
+  "elemento": "Bapi_Teste",
+  "problema": "Falha X – ç",
+  "substitui": "S00001, S00002",
+  "motivo": "Motivo \"ç\"",
+  "before": "SELECT SINGLE * FROM vbuk INTO ls.\n\n",
+  "after": "SELECT SINGLE * FROM vbak INTO ls.   \n"
+ },
+ {
+  "op": "registrar",
+  "categoria": "funcoes",
+  "elemento": "bapi_teste",
+  "problema": null,
+  "substitui": "S1",
+  "motivo": null,
+  "before": "SELECT SINGLE * FROM vbuk INTO ls.\n\n",
+  "after": "SELECT SINGLE * FROM vbak INTO ls.   \n"
+ },
+ {
+  "op": "registrar",
+  "categoria": "tabelas",
+  "elemento": "/CWM/ABC",
+  "problema": null,
+  "substitui": null,
+  "motivo": null,
+  "before": "SELECT SINGLE * FROM vbuk INTO ls.\n\n",
+  "after": "SELECT SINGLE * FROM vbak INTO ls.   \n"
+ }
+]

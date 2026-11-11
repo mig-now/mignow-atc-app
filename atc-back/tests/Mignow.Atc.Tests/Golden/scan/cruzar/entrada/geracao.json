@@ -1,0 +1,12 @@
+{
+ "classe": "ZCL_MIGNOW_ATC_SCAN",
+ "lotes": [
+  {
+   "lote": 1
+  },
+  {
+   "lote": 2
+  }
+ ],
+ "regras_versao": "1.0"
+}

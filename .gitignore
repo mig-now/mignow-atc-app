@@ -1,0 +1,28 @@
+# .NET
+bin/
+obj/
+TestResults/
+*.user
+
+# Front
+node_modules/
+build/
+.react-router/
+coverage/
+
+# Segredos e configuração local (connection string e chave ficam em dotnet user-secrets; PAT no ~/.npmrc de cada dev)
+.env
+.env.*
+!.env.example
+**/cred*.xml
+*.clixml
+*.pfx
+*.p12
+*.pem
+*.key
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
+.vscode/

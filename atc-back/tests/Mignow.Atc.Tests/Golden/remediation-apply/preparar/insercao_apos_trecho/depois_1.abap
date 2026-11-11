@@ -1,0 +1,5 @@
+ENDFORM.
+
+FORM novo.
+  WRITE 'n'.
+ENDFORM.

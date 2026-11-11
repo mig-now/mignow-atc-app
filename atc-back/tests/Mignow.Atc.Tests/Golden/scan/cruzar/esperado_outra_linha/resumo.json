@@ -1,0 +1,163 @@
+{
+ "varredura": "cruzar_outra_linha",
+ "sistema": "TST/100",
+ "gerado_em": "2026-11-08T19:51:48",
+ "classe_temporaria": "ZCL_MIGNOW_ATC_SCAN",
+ "regras_versao": "1.0",
+ "base_atc": {
+  "arquivo": "atc_total.csv",
+  "serie": null,
+  "executada_utc": null,
+  "findings": 6
+ },
+ "escopo": {
+  "objetos": 5,
+  "por_tipo": {
+   "CLAS": 1,
+   "FUGR": 1,
+   "PROG": 3
+  },
+  "excluidos": {
+   "tmp": 2,
+   "marcados_exclusao": 1,
+   "gerados": 0
+  }
+ },
+ "lotes": 2,
+ "lidos": {
+  "objetos": 4,
+  "fontes": 9,
+  "linhas": 650,
+  "erros_objeto": 1,
+  "erros_regex": 1
+ },
+ "ocorrencias": {
+  "total": 9,
+  "pendente": 7,
+  "ja_remediado": 1,
+  "informativo": 1
+ },
+ "cruzamento_pendentes": {
+  "ATC_PEGOU": 2,
+  "ATC_OUTRA_LINHA": 2,
+  "MIGNOW_FONTE_SEM_FINDING": 2,
+  "MIGNOW_FONTE_COM_FINDING": 1
+ },
+ "mignow": {
+  "ocorrencias": 3,
+  "objetos": 2,
+  "por_tipo_objeto": {
+   "PROG": 1,
+   "FUGR": 1
+  }
+ },
+ "csv_remediacao": {
+  "arquivo": "mignow_TST_100_20261108-195148_remediacao.csv",
+  "linhas": 5,
+  "prioridade": 1,
+  "inclui_outra_linha": true,
+  "por_regra": {
+   "REGEX_002": 2,
+   "REGEX_001": 2,
+   "REGEX_005": 1
+  }
+ },
+ "comparacao_original_x_refinada": {
+  "original_linhas": 6,
+  "refinada_ocorrencias": 9,
+  "refinada_pendentes": 7,
+  "refinada_csv": 5
+ },
+ "por_regra": {
+  "REGEX_001": {
+   "descricao": "Acesso direto a VBUP/VBUK (status de item/cabecalho de remessa) - validar CDS Views/BAPIs ",
+   "original_linhas": 4,
+   "refinada_total": 4,
+   "pendente": 4,
+   "ATC_PEGOU": 2,
+   "MIGNOW_FONTE_COM_FINDING": 1,
+   "ATC_OUTRA_LINHA": 1
+  },
+  "REGEX_002": {
+   "descricao": "Acesso direto a KONV - substituida por PRCD_ELEMENTS no S/4HANA (Simplification Item de Pr",
+   "original_linhas": 2,
+   "refinada_total": 2,
+   "pendente": 2,
+   "ATC_OUTRA_LINHA": 1,
+   "MIGNOW_FONTE_SEM_FINDING": 1
+  },
+  "REGEX_003": {
+   "descricao": "Uso do parametro ALPHA = IN em conversao de numero de material - revisar apos ampliacao do",
+   "original_linhas": 0,
+   "refinada_total": 2,
+   "ja_remediado": 1,
+   "informativo": 1
+  },
+  "REGEX_005": {
+   "descricao": "Uso de transacao XK* (mestre de fornecedor) - substituida pela transacao BP no S/4HANA",
+   "original_linhas": 0,
+   "refinada_total": 1,
+   "pendente": 1,
+   "MIGNOW_FONTE_SEM_FINDING": 1
+  }
+ },
+ "cobertura_atc_por_elemento": {
+  "VBUK": {
+   "pendentes": 3,
+   "atc_pegou": 3,
+   "mignow": 0,
+   "cobertura_atc_pct": 100.0
+  },
+  "KONV": {
+   "pendentes": 2,
+   "atc_pegou": 1,
+   "mignow": 1,
+   "cobertura_atc_pct": 50.0
+  },
+  "VBUP": {
+   "pendentes": 1,
+   "atc_pegou": 0,
+   "mignow": 1,
+   "cobertura_atc_pct": 0.0
+  },
+  "XK01": {
+   "pendentes": 1,
+   "atc_pegou": 0,
+   "mignow": 1,
+   "cobertura_atc_pct": 0.0
+  }
+ },
+ "top_objetos_mignow": [
+  [
+   "FUGR ZFG",
+   2
+  ],
+  [
+   "PROG ZINC",
+   1
+  ]
+ ],
+ "top_pacotes_mignow": [
+  [
+   "ZPKG3",
+   2
+  ],
+  [
+   "ZPKG1",
+   1
+  ]
+ ],
+ "erros_objeto_amostra": [
+  [
+   "PROG",
+   "ZBAD",
+   "falha ao ler o fonte"
+  ]
+ ],
+ "erros_regex": [
+  [
+   "REGEX_009",
+   "erro de regex"
+  ]
+ ]
+}

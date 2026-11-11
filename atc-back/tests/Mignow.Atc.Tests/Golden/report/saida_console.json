@@ -1,0 +1,76 @@
+{
+ "ok": true,
+ "arquivo": "/private/var/folders/dc/87k5klnn5xxb9wvg6yf88c500000gn/T/tmp.065i1v29lJ/clientes/GOLD/resultado/dados.json",
+ "itens": 6,
+ "objetos": 5,
+ "por_solucao": {
+  "KB": 1,
+  "Análise": 2,
+  "Isenção": 2,
+  "Pendente": 1
+ },
+ "pontos_evolucao": 2,
+ "fases_custo": [
+  "Extração do ATC",
+  "Remediação",
+  "Pedido de isenção"
+ ],
+ "custo_total": {
+  "sessoes": 3,
+  "liquido_s": 1080,
+  "total": 6700,
+  "saida": 670,
+  "cache_leitura": 0,
+  "entrada_escrita": 6030,
+  "periodo": "20.10 09:50 – 22.10 09:02",
+  "calendario_h": 47
+ },
+ "execucao_processo": {
+  "execucoes_com_registro": 0,
+  "execucoes_sem_registro": 3,
+  "agentes": 0,
+  "ganho_paralelismo_s": 0
+ },
+ "ciclos": [
+  {
+   "ciclo": 1,
+   "fonte": "sessao.json",
+   "findings": 6,
+   "objetos": 5,
+   "por_solucao": {
+    "KB": 1,
+    "Análise": 2,
+    "Isenção": 2,
+    "Pendente": 1
+   },
+   "ja_tratados_antes": {
+    "qtde": 0,
+    "por_solucao_anterior": {}
+   }
+  }
+ ],
+ "comparacao_manual": {
+  "premissas": {
+   "objetos_dia": 64,
+   "horas_dia": 8,
+   "fonte": "padrão da skill atc-resultado 1.2 (premissa do consultor, 28.10.2026)"
+  },
+  "objetos_tratados": 4,
+  "manual_s": 1800,
+  "ia_s": 1080,
+  "ia_remediacao_s": 360,
+  "ganho_s": 720,
+  "reducao_pct": 40.0,
+  "fator": 1.7,
+  "fator_remediacao": 5.0
+ },
+ "isencao": {
+  "lote": "lote_20261022-090000",
+  "findings": 2,
+  "pedidos": 1,
+  "sem_escopo": 1
+ },
+ "avisos": [
+  "Execução do processo: nenhuma execução tem o campo 'execucao' (anteriores ao registro do processo); a seção mostra só um aviso"
+ ]
+}

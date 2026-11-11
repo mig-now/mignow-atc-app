@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/1 - Presentation/">
+    <Project Path="src/Mignow.Atc.Api/Mignow.Atc.Api.csproj" />
+  </Folder>
+  <Folder Name="/2 - Application/">
+    <Project Path="src/Mignow.Atc.Application/Mignow.Atc.Application.csproj" />
+  </Folder>
+  <Folder Name="/3 - Domain/">
+    <Project Path="src/Mignow.Atc.Domain/Mignow.Atc.Domain.csproj" />
+  </Folder>
+  <Folder Name="/4 - Infra/">
+    <Project Path="src/Mignow.Atc.Infra.Database/Mignow.Atc.Infra.Database.csproj" />
+    <Project Path="src/Mignow.Atc.Infra.External/Mignow.Atc.Infra.External.csproj" />
+    <Project Path="src/Mignow.Atc.Infra.IoC/Mignow.Atc.Infra.IoC.csproj" />
+  </Folder>
+  <Folder Name="/5 - Tests/">
+    <Project Path="tests/Mignow.Atc.Tests/Mignow.Atc.Tests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Mignow.Atc.Infra.IoC</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="Scrutor" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mignow.Atc.Application\Mignow.Atc.Application.csproj" />
+    <ProjectReference Include="..\Mignow.Atc.Domain\Mignow.Atc.Domain.csproj" />
+    <ProjectReference Include="..\Mignow.Atc.Infra.Database\Mignow.Atc.Infra.Database.csproj" />
+    <ProjectReference Include="..\Mignow.Atc.Infra.External\Mignow.Atc.Infra.External.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,98 @@
+[
+ {
+  "new": "DATA: l TYPE c.\nl = matnr+18(04).",
+  "original": "",
+  "alerts": [
+   "Chave de lote montada com material em 18 posições: no S/4 a chave é MATNR(40)+WERKS+CHARG (falha em CLAF/OBJECTKEY_LONG/SELECT direto). Use o layout de 40 posições e OBJECTKEY_LONG."
+  ],
+  "commands": 2,
+  "complexity": "complexa"
+ },
+ {
+  "new": "CALL FUNCTION 'CONVERSION_EXIT_ALPHA_INPUT'\n EXPORTING input = lv_matnr\n IMPORTING output = lv_matnr.",
+  "original": "",
+  "alerts": [
+   "Conversão ALPHA aplicada a material: use CONVERSION_EXIT_MATN1_INPUT/OUTPUT."
+  ],
+  "commands": 1,
+  "complexity": "complexa"
+ },
+ {
+  "new": "CALL FUNCTION 'CONVERSION_EXIT_ALPHA_INPUT'\n EXPORTING input = lv_x\n IMPORTING output = lv_x.",
+  "original": "",
+  "alerts": [
+   "Conversão ALPHA aplicada a material: use CONVERSION_EXIT_MATN1_INPUT/OUTPUT."
+  ],
+  "commands": 1,
+  "complexity": "complexa"
+ },
+ {
+  "new": "DATA lv_matnr(18) TYPE c.",
+  "original": "",
+  "alerts": [
+   "Material truncado em 18 posições: as BAPIs têm parâmetro MATERIAL_LONG; use o MATNR completo."
+  ],
+  "commands": 1,
+  "complexity": "complexa"
+ },
+ {
+  "new": "CALL TRANSACTION 'ME52N' USING bdcdata MODE 'N'.",
+  "original": "CALL TRANSACTION 'ME52' USING bdcdata.",
+  "alerts": [
+   "Troca para ME52N mantendo batch input (USING bdcdata): a transação Enjoy usa outro programa/telas e o BDC da transação antiga provavelmente não funciona. Prefira a BAPI equivalente (ex.: BAPI_PR_CHANGE/BAPI_REQUISITION_DELETE para ME52N, BAPI_OBJCL_CHANGE para MSC2N) ou adapte as telas do bdcdata."
+  ],
+  "commands": 1,
+  "complexity": "complexa"
+ },
+ {
+  "new": "CALL TRANSACTION 'ME52N' USING bdcdata MODE 'N'.",
+  "original": "CALL TRANSACTION 'XX01' USING bdcdata.",
+  "alerts": [],
+  "commands": 1,
+  "complexity": "simples"
+ },
+ {
+  "new": "LOOP AT it.\n SELECT * FROM mara INTO TABLE lt WHERE matnr = it-matnr.\nENDLOOP.",
+  "original": "",
+  "alerts": [
+   "SELECT ... INTO TABLE dentro de LOOP sobrescreve o resultado a cada volta: use FOR ALL ENTRIES ou APPENDING."
+  ],
+  "commands": 3,
+  "complexity": "complexa"
+ },
+ {
+  "new": "LOOP AT it.\n SELECT * FROM mara APPENDING TABLE lt WHERE matnr = it-matnr.\nENDLOOP.",
+  "original": "",
+  "alerts": [],
+  "commands": 3,
+  "complexity": "simples"
+ },
+ {
+  "new": "* comentário. com ponto.\nx = 'a.b'. \"c. d\n  y = 1. z = 2.",
+  "original": "",
+  "alerts": [],
+  "commands": 3,
+  "complexity": "simples"
+ },
+ {
+  "new": "",
+  "original": "",
+  "alerts": [],
+  "commands": 0,
+  "complexity": "simples"
+ },
+ {
+  "new": "   \n",
+  "original": "",
+  "alerts": [],
+  "commands": 0,
+  "complexity": "simples"
+ },
+ {
+  "new": "a = 1.\nb = 2.\nc = 3.\nd = 4.",
+  "original": "a = 1.",
+  "alerts": [],
+  "commands": 4,
+  "complexity": "media"
+ }
+]

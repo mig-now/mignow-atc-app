@@ -1,0 +1,13 @@
+--- ZPROG.abap (atual)
++++ ZPROG.abap (corrigido)
+@@ -8,6 +8,8 @@
+ WRITE 1.
+ WRITE 2.
+-WRITE 3.
+-WRITE 4.
++*>>> S/4 MIGRATION MIG-NOW - START OF DELETION - 06.11.2026 AUT-ML
++*WRITE 3.
++*WRITE 4.
++*<<< S/4 MIGRATION MIG-NOW - END OF DELETION - 06.11.2026 AUT-ML
+ WRITE 5.
+ WRITE 6.

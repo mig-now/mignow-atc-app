@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Exemption.BatchNotFound" xml:space="preserve"><value>Lote de exención no encontrado.</value></data>
+  <data name="Exemption.SessionNotFound" xml:space="preserve"><value>Sesión de remediación no encontrada.</value></data>
+  <data name="Exemption.NoItems" xml:space="preserve"><value>Ningún ítem con estado 'Exención' (¿sesión antigua? use includeObs).</value></data>
+  <data name="Exemption.NoFindings" xml:space="preserve"><value>Ningún finding quedó para el lote de exención (fuera de alcance, ya exentos, ya solicitados o sin vínculo).</value></data>
+  <data name="Exemption.ExtractionRequired" xml:space="preserve"><value>Ítems sin 'Finding ID' y ninguna extracción del ATC para el ambiente.</value></data>
+  <data name="Exemption.ApproverRequired" xml:space="preserve"><value>Aprobador no informado.</value></data>
+  <data name="Exemption.ApproverIsRequester" xml:space="preserve"><value>El aprobador ({0}) no puede ser el solicitante (principio de los 4 ojos de SAP).</value></data>
+  <data name="Exemption.ReasonUnknown" xml:space="preserve"><value>El motivo '{0}' no existe en el sistema (válidos: {1}).</value></data>
+  <data name="Exemption.DiscoveryRequired" xml:space="preserve"><value>Ejecute el descubrimiento (política A) antes de simular.</value></data>
+  <data name="Exemption.SimulationRequired" xml:space="preserve"><value>Simule el lote antes de enviar.</value></data>
+  <data name="Exemption.NothingToSend" xml:space="preserve"><value>Ningún finding simulado y con alcance para enviar.</value></data>
+  <data name="Exemption.NothingToCheck" xml:space="preserve"><value>Ningún finding solicitado para verificar.</value></data>
+  <data name="Exemption.SeqUnknown" xml:space="preserve"><value>seq fuera del lote: {0}.</value></data>
+  <data name="Exemption.Discovery.ApplyNotPublished" xml:space="preserve"><value>Servicio ADT /sap/bc/adt/atc/exemptions/apply no publicado.</value></data>
+  <data name="Exemption.Discovery.PolicyNotAllowed" xml:space="preserve"><value>Política de exención del ATC = '{value}' ({text}); el ADT solo acepta pedido con 'A' (ATC &gt; Setup &gt; Configure ATC, administrador del ATC).</value></data>
+  <data name="Exemption.Discovery.NoTemplate" xml:space="preserve"><value>Modelo del pedido no devuelto para el finding de ejemplo: {message}</value></data>
+  <data name="Exemption.Discovery.NoApprovers" xml:space="preserve"><value>Ningún aprobador de exención registrado (SATC_CI_APPROVER/SATC_CI_AREA vacías): ATC &gt; Setup &gt; Maintain Approvers.</value></data>
+  <data name="Exemption.Discovery.Ok" xml:space="preserve"><value>Descubrimiento concluido. Política: {policy}.</value></data>
+  <data name="Exemption.Send.PolicyDisabled" xml:space="preserve"><value>Exenciones desactivadas en el sistema (EXEMPTION.POLICY = '{value}', {text}): no se envió nada.</value></data>
+  <data name="Exemption.Simulate.Done" xml:space="preserve"><value>Simulación concluida: {count} finding(s).</value></data>
+  <data name="Exemption.Send.Done" xml:space="preserve"><value>Envío concluido: {count} finding(s).</value></data>
+  <data name="Exemption.Check.Done" xml:space="preserve"><value>Verificación concluida: {count} finding(s).</value></data>
+  <data name="Exemption.Check.StillNoExemption" xml:space="preserve"><value>Pedido aceptado (S), pero el finding sigue sin exención (SAP devuelve modelo nuevo): verificar en la transacción ATC.</value></data>
+  <data name="Exemption.Check.SapMessage" xml:space="preserve"><value>Situación del finding en SAP.</value></data>
+  <data name="ExemptionRequest.InvalidSeq" xml:space="preserve"><value>Seq desde 1.</value></data>
+  <data name="ExemptionRequest.DuplicateMarker" xml:space="preserve"><value>El finding ya está en el lote.</value></data>
+</root>

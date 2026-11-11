@@ -1,0 +1,14 @@
+{
+ "findings": [
+  {
+   "seq": 1,
+   "n": 4,
+   "objeto": "ZT"
+  },
+  {
+   "seq": 2,
+   "n": 5,
+   "objeto": "ZC"
+  }
+ ]
+}

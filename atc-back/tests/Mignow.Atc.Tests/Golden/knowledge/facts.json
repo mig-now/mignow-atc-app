@@ -1,0 +1,25 @@
+{
+ "BAPI_PO_GETDETAIL1": [],
+ "BSID": [
+  {
+   "id": "F-BSID-001",
+   "data": "2026-10-30",
+   "texto": "**Fato:** No S/4HANA a BSID e view de BKPF+BSEG e UPDATE bsid da erro de sintaxe (view read-only)  \n**Prova:** verificar_sintaxe + DD26S BSID no SBX/100  \n**Impacto/como usar:** Remover o UPDATE bsid; os dados vem da BSEG"
+  }
+ ],
+ "bsid ": [
+  {
+   "id": "F-BSID-001",
+   "data": "2026-10-30",
+   "texto": "**Fato:** No S/4HANA a BSID e view de BKPF+BSEG e UPDATE bsid da erro de sintaxe (view read-only)  \n**Prova:** verificar_sintaxe + DD26S BSID no SBX/100  \n**Impacto/como usar:** Remover o UPDATE bsid; os dados vem da BSEG"
+  }
+ ],
+ "BAPI_GOODSMVT_CREATE": [
+  {
+   "id": "F-BAPI_GOODSMVT_CREATE-001",
+   "data": "2026-10-28",
+   "texto": "**Fato:** O check da nota 2438131 (Syntactically incompatible change of existing functionality) continua marcando a chamada da BAPI depois da correcao MFLE feita nos campos *_LONG das estruturas/tabelas (ex.: POITEM-MATERIAL_LONG, ORDER_ITEMS_IN-MATERIAL_LONG, GOODSMVT_ITEM-MATERIAL_LONG, OBJECTKEY_LONG); a triagem R5 so reconhece *_LONG passado direto na chamada  \n**Prova:** EC2 (S/4HANA 2025): correcoes ativadas em 24.10.2026; a execucao ATC ZMIG_S4 de 28.10.2026 manteve os findings na linha do CALL FUNCTION  \n**Impacto/como usar:** Conferir no fonte que o *_LONG e preenchido e pedir isencao FPOS; nao reaplicar a correcao"
+  }
+ ],
+ "NAO_EXISTE": []
+}

@@ -1,0 +1,8 @@
+{
+  "email": "Invalid email.",
+  "format": "Invalid format.",
+  "invalid": "Invalid value.",
+  "required": "Required.",
+  "tooBig": "Maximum: {{maximum}}.",
+  "tooSmall": "Minimum: {{minimum}}."
+}

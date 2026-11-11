@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <!-- Marcador do módulo Extraction: chaves <Código> só deste módulo, nos 3 idiomas (procuradas pelo ErrorText). -->
+  <data name="Extraction.AlreadyExtracted" xml:space="preserve"><value>This ATC run was already extracted; nothing to do (use force to extract again).</value></data>
+  <data name="Extraction.DisplayIdRequired" xml:space="preserve"><value>The ATC run id is required.</value></data>
+  <data name="Extraction.Extracted" xml:space="preserve"><value>Extraction done: {total} finding(s), {new} without baseline, {inBaseline} in baseline.</value></data>
+  <data name="Extraction.FindingsRead" xml:space="preserve"><value>{count} finding(s) read from the ATC result.</value></data>
+  <data name="Extraction.InvalidCounts" xml:space="preserve"><value>Counts cannot be negative.</value></data>
+  <data name="Extraction.InvalidPriorities" xml:space="preserve"><value>Priorities must be a list of 1, 2 and/or 3 (e.g. 1,2).</value></data>
+  <data name="Extraction.OptionalTablesMissing" xml:space="preserve"><value>Optional table(s) not found in the system: {tables}. Extraction continues without them (no baseline: every finding counts as new; no SAP note titles).</value></data>
+  <data name="Extraction.LatestFound" xml:space="preserve"><value>Latest completed ATC run found: {displayId} ({series}).</value></data>
+  <data name="Extraction.NewerInProgress" xml:space="preserve"><value>A newer ATC run is still in progress: {displayId} ({series}).</value></data>
+  <data name="Extraction.NoCompletedRun" xml:space="preserve"><value>No completed ATC run with series prefix {0} was found in this system/client ({1} run(s) found).</value></data>
+  <data name="Extraction.NoLatest" xml:space="preserve"><value>The latest ATC run was not identified (rerun the extraction).</value></data>
+  <data name="Extraction.NotFound" xml:space="preserve"><value>Extraction not found.</value></data>
+  <data name="Extraction.SeriesRequired" xml:space="preserve"><value>The ATC series is required.</value></data>
+  <data name="Finding.ObjectRequired" xml:space="preserve"><value>The finding object is required.</value></data>
+</root>

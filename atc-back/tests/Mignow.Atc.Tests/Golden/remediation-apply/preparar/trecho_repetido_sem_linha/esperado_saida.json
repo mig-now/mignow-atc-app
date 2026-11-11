@@ -1,0 +1,8 @@
+{
+ "ok": false,
+ "erro": "trecho atual /private/tmp/claude-501/-Users-neto-Downloads-MigNow---Documentos-Projetos-mignow-atc-process-main/6a3b8704-1ac1-4b4b-92b6-f08484b79ea0/scratchpad/remediation-apply/x/tmp_blocos/trecho_repetido_sem_linha_1/antes.abap precisa aparecer exatamente 1 vez no fonte (ou use --linha para escolher a ocorrencia)",
+ "ocorrencias": [
+  2,
+  5
+ ]
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <!-- Marcador do módulo Extraction: chaves <Código> só deste módulo, nos 3 idiomas (procuradas pelo ErrorText). -->
+  <data name="Extraction.AlreadyExtracted" xml:space="preserve"><value>Esta execução do ATC já foi extraída; nada a fazer (use force para extrair de novo).</value></data>
+  <data name="Extraction.DisplayIdRequired" xml:space="preserve"><value>O id da execução do ATC é obrigatório.</value></data>
+  <data name="Extraction.Extracted" xml:space="preserve"><value>Extração concluída: {total} finding(s), {new} sem baseline, {inBaseline} em baseline.</value></data>
+  <data name="Extraction.FindingsRead" xml:space="preserve"><value>{count} finding(s) lido(s) do resultado do ATC.</value></data>
+  <data name="Extraction.InvalidCounts" xml:space="preserve"><value>As contagens não podem ser negativas.</value></data>
+  <data name="Extraction.InvalidPriorities" xml:space="preserve"><value>As prioridades devem ser uma lista de 1, 2 e/ou 3 (ex.: 1,2).</value></data>
+  <data name="Extraction.OptionalTablesMissing" xml:space="preserve"><value>Tabela(s) opcional(is) inexistente(s) no sistema: {tables}. A extração segue sem elas (sem baseline: todo finding conta como novo; sem título das notas SAP).</value></data>
+  <data name="Extraction.LatestFound" xml:space="preserve"><value>Última execução concluída do ATC encontrada: {displayId} ({series}).</value></data>
+  <data name="Extraction.NewerInProgress" xml:space="preserve"><value>Há uma execução do ATC mais nova ainda em andamento: {displayId} ({series}).</value></data>
+  <data name="Extraction.NoCompletedRun" xml:space="preserve"><value>Nenhuma execução concluída do ATC com série de prefixo {0} neste sistema/mandante ({1} execução(ões) encontrada(s)).</value></data>
+  <data name="Extraction.NoLatest" xml:space="preserve"><value>A última execução do ATC não foi identificada (rode a extração de novo).</value></data>
+  <data name="Extraction.NotFound" xml:space="preserve"><value>Extração não encontrada.</value></data>
+  <data name="Extraction.SeriesRequired" xml:space="preserve"><value>A série do ATC é obrigatória.</value></data>
+  <data name="Finding.ObjectRequired" xml:space="preserve"><value>O objeto do finding é obrigatório.</value></data>
+</root>

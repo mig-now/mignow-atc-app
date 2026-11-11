@@ -1,0 +1,56 @@
+{
+ "classe": "ZCL_MIGNOW_ATC_SCAN",
+ "gerado_em": "2026-11-08T19:50:57",
+ "regras_versao": "1.0",
+ "regras_ativas": [
+  "REGEX_001",
+  "REGEX_002",
+  "REGEX_003",
+  "REGEX_004",
+  "REGEX_005",
+  "REGEX_006",
+  "REGEX_007",
+  "REGEX_008",
+  "REGEX_009",
+  "REGEX_010",
+  "REGEX_011",
+  "REGEX_012",
+  "REGEX_013",
+  "REGEX_014",
+  "REGEX_015",
+  "REGEX_016",
+  "REGEX_017",
+  "REGEX_018",
+  "REGEX_019",
+  "REGEX_020",
+  "REGEX_021",
+  "REGEX_022",
+  "REGEX_023",
+  "REGEX_024",
+  "REGEX_025",
+  "REGEX_026",
+  "REGEX_027",
+  "REGEX_028",
+  "REGEX_029",
+  "REGEX_030",
+  "REGEX_031",
+  "REGEX_032"
+ ],
+ "comparar_original": true,
+ "lotes": [
+  {
+   "lote": 1,
+   "arquivo": "lote_001.abap",
+   "objetos": 3,
+   "linhas_abap": 623,
+   "sha1": "f52c2c3bef9d47b2d62a1628dd988888e181e9a9"
+  },
+  {
+   "lote": 2,
+   "arquivo": "lote_002.abap",
+   "objetos": 2,
+   "linhas_abap": 622,
+   "sha1": "31703c4fafa97f85cbb7cea25dfa8f5d3cf642e1"
+  }
+ ]
+}

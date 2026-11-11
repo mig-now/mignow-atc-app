@@ -1,0 +1,110 @@
+{
+  "APPLY": [
+    "Apply"
+  ],
+  "AUTO_APPLY": [
+    "AutoRemediation",
+    "Propose"
+  ],
+  "AUTO_CONFIRM": [
+    "Propose"
+  ],
+  "AUTO_PROPOSE_AI": [
+    "AutoRemediation"
+  ],
+  "AUTO_REMEDIATION_CONFIRM": [
+    "AutoRemediation"
+  ],
+  "AUTO_REMEDIATION_SUMMARY": [
+    "AutoRemediation"
+  ],
+  "AUTO_REVIEW": [
+    "AutoRemediation",
+    "Propose"
+  ],
+  "AUTO_SIMULATE": [
+    "AutoRemediation",
+    "Propose"
+  ],
+  "AUTO_SOURCES_PLAN": [
+    "AutoRemediation"
+  ],
+  "AUTO_TRIAGE": [
+    "AutoRemediation"
+  ],
+  "BATCH_REPORT": [
+    "AutoRemediation",
+    "Propose"
+  ],
+  "CONFIRM_R1_APPLY": [
+    "AutoRemediation",
+    "ConfirmR1"
+  ],
+  "CONFIRM_R1_CHECK": [
+    "AutoRemediation",
+    "ConfirmR1"
+  ],
+  "EXEMPTION_CHECK": [
+    "ExemptionCheck"
+  ],
+  "EXEMPTION_DISCOVER": [
+    "ExemptionDiscover"
+  ],
+  "EXEMPTION_SEND": [
+    "ExemptionSend"
+  ],
+  "EXEMPTION_SIMULATE": [
+    "ExemptionSimulate"
+  ],
+  "EXTRACTION_EXTRACT": [
+    "Extraction"
+  ],
+  "EXTRACTION_FIND_LATEST": [
+    "Extraction",
+    "ExtractionCheck"
+  ],
+  "PROPOSE": [
+    "AutoRemediation",
+    "Propose"
+  ],
+  "READ_SOURCES_FETCH": [
+    "AutoRemediation",
+    "ReadSources"
+  ],
+  "READ_SOURCES_PLAN": [
+    "ReadSources"
+  ],
+  "REVIEW": [
+    "ApplySimulate"
+  ],
+  "ROLLBACK": [
+    "Rollback"
+  ],
+  "SCAN_CALIBRATE": [
+    "ScanExecute"
+  ],
+  "SCAN_CLEANUP": [
+    "ScanCleanup"
+  ],
+  "SCAN_CROSS": [
+    "ScanExecute"
+  ],
+  "SCAN_INVENTORY": [
+    "ScanInventory"
+  ],
+  "SCAN_LOTS": [
+    "ScanExecute"
+  ],
+  "SCAN_PREPARE": [
+    "ScanExecute"
+  ],
+  "SCAN_SIMULATE": [
+    "ScanSimulate"
+  ],
+  "SIMULATE": [
+    "ApplySimulate"
+  ],
+  "TEST_CONNECTION": [
+    "ConnectionTest"
+  ]
+}

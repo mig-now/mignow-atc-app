@@ -1,0 +1,103 @@
+{
+ "ok": true,
+ "itens_selecionados": 10,
+ "findings": 5,
+ "prioridades": [
+  "1"
+ ],
+ "fora_do_escopo": 2,
+ "sem_prioridade": [
+  {
+   "n": 10,
+   "objeto": "ZAMB",
+   "marker_id": "atc:GGG,7,  X"
+  }
+ ],
+ "grupos_itens_x_findings_divergentes": [
+  {
+   "itens": [
+    2
+   ],
+   "objeto": "ZACIC",
+   "ref": "BAPI_SALESORDER_CREATEFROMDAT2",
+   "findings": 2
+  }
+ ],
+ "por_origem": {
+  "finding_id": 2,
+  "cruzamento": 3
+ },
+ "sem_vinculo": [
+  {
+   "n": 8,
+   "objeto": "ZNOLINK",
+   "tipo": "PROG",
+   "ref": "MARA",
+   "msg": "Sem vinculo"
+  }
+ ],
+ "ja_isentos_na_extracao": [
+  {
+   "n": 6,
+   "marker_id": "atc:EEE,5,  X",
+   "exemptionApproval": "A"
+  }
+ ],
+ "ja_pedidos_pela_skill": [
+  {
+   "n": 7,
+   "marker_id": "atc:FFF,6,  X"
+  }
+ ],
+ "provavel_sem_escopo": [
+  {
+   "seq": 4,
+   "n": 3,
+   "objeto": "ZSYN",
+   "msg": "Syntax error in program",
+   "aviso_escopo": "checksum -1"
+  }
+ ],
+ "amostra": [
+  {
+   "seq": 1,
+   "n": 1,
+   "objeto": "ZACIC",
+   "include": "LZACICF02",
+   "linha": 535,
+   "ref": "BAPI_SALESORDER_CREATEFROMDAT2"
+  },
+  {
+   "seq": 2,
+   "n": 2,
+   "objeto": "ZACIC",
+   "include": "LZACICF02",
+   "linha": 535,
+   "ref": "BAPI_SALESORDER_CREATEFROMDAT2"
+  },
+  {
+   "seq": 3,
+   "n": 2,
+   "objeto": "ZACIC",
+   "include": "LZACICF02",
+   "linha": 974,
+   "ref": "BAPI_SALESORDER_CREATEFROMDAT2"
+  },
+  {
+   "seq": 4,
+   "n": 3,
+   "objeto": "ZSYN",
+   "include": "",
+   "linha": null,
+   "ref": ""
+  },
+  {
+   "seq": 5,
+   "n": 9,
+   "objeto": "ZOLDOBS",
+   "include": "ZINC",
+   "linha": 7,
+   "ref": "KONV"
+  }
+ ]
+}

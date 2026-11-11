@@ -1,0 +1,260 @@
+{
+  "release": "S/4HANA 2023 (simulado)",
+  "objects": [
+    {
+      "name": "ZMIG_SD_PRICING",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmig_sd_pricing.\nDATA lt_konv TYPE TABLE OF konv.\nSELECT * FROM konv INTO TABLE lt_konv WHERE knumv = '0000000001'.\nWRITE: / lines( lt_konv ).\n"
+    },
+    {
+      "name": "ZMIG_SD_STATUS",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmig_sd_status.\nDATA lv_gbstk TYPE vbuk-gbstk.\nSELECT SINGLE gbstk FROM vbuk INTO lv_gbstk WHERE vbeln = '0000000001'.\nWRITE: / lv_gbstk.\n"
+    },
+    {
+      "name": "ZMIG_SD_ITEMSTATUS",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmig_sd_itemstatus.\nDATA lv_lfsta TYPE c LENGTH 1.\nSELECT SINGLE lfsta FROM vbup INTO lv_lfsta WHERE vbeln = '0000000001'.\nWRITE: / lv_lfsta.\n"
+    },
+    {
+      "name": "ZMIG_FI_ITEMS",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmig_fi_items.\nDATA lt_bseg TYPE TABLE OF bseg.\nSELECT * FROM bseg INTO TABLE lt_bseg UP TO 10 ROWS.\nWRITE: / lines( lt_bseg ).\n"
+    },
+    {
+      "name": "ZMIG_MM_DOCS",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmig_mm_docs.\nDATA lt_mkpf TYPE TABLE OF mkpf.\nSELECT * FROM mkpf INTO TABLE lt_mkpf UP TO 10 ROWS.\nWRITE: / lines( lt_mkpf ).\n"
+    },
+    {
+      "name": "ZMIG_MM_MATNR",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmig_mm_matnr.\nDATA lv_matnr TYPE c LENGTH 18.\nDATA lv_text TYPE string.\nlv_text = lv_matnr(18).\nWRITE: / lv_text.\n"
+    },
+    {
+      "name": "ZMIG_LIS_REPORT",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmig_lis_report.\nDATA lt_s032 TYPE TABLE OF s032.\nSELECT * FROM s032 INTO TABLE lt_s032 UP TO 5 ROWS.\nWRITE: / lines( lt_s032 ).\n"
+    },
+    {
+      "name": "ZMIG_CLEAN",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmig_clean.\nDATA lv_x TYPE i VALUE 1.\nWRITE: / lv_x.\n"
+    },
+    {
+      "name": "ZMIG_CLEAN_2",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmig_clean_2.\nDATA lv_text TYPE string VALUE 'ok'.\nWRITE: / lv_text.\n"
+    },
+    {
+      "name": "ZMIG_MAIN_INCL",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmig_main_incl.\nINCLUDE zmig_main_incl_top.\nINCLUDE zmig_main_incl_f01.\nSTART-OF-SELECTION.\n  PERFORM read_conditions.\n",
+      "dependencies": [
+        "ZMIG_MAIN_INCL_TOP",
+        "ZMIG_MAIN_INCL_F01"
+      ]
+    },
+    {
+      "name": "ZMIG_MAIN_INCL_TOP",
+      "type": "PROG/I",
+      "package": "ZMIGFIX_TEST",
+      "source": "DATA gt_konv TYPE TABLE OF konv.\n",
+      "mainProgram": "ZMIG_MAIN_INCL"
+    },
+    {
+      "name": "ZMIG_MAIN_INCL_F01",
+      "type": "PROG/I",
+      "package": "ZMIGFIX_TEST",
+      "source": "FORM read_conditions.\n  SELECT * FROM konv INTO TABLE gt_konv UP TO 10 ROWS.\nENDFORM.\n",
+      "mainProgram": "ZMIG_MAIN_INCL"
+    },
+    {
+      "name": "ZCL_MIG_PRICING",
+      "type": "CLAS/OC",
+      "package": "ZMIGFIX_TEST",
+      "source": "CLASS zcl_mig_pricing DEFINITION PUBLIC FINAL CREATE PUBLIC.\n  PUBLIC SECTION.\n    METHODS read.\nENDCLASS.\nCLASS zcl_mig_pricing IMPLEMENTATION.\n  METHOD read.\n    DATA lt_konv TYPE TABLE OF konv.\n    SELECT * FROM konv INTO TABLE lt_konv UP TO 1 ROWS.\n  ENDMETHOD.\nENDCLASS.\n",
+      "usedBy": [
+        "ZMIG_USES_CLASS"
+      ]
+    },
+    {
+      "name": "ZMIG_USES_CLASS",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmig_uses_class.\nNEW zcl_mig_pricing( )->read( ).\n"
+    },
+    {
+      "name": "ZMIG_FG",
+      "type": "FUGR/F",
+      "package": "ZMIGFIX_TEST",
+      "source": "FUNCTION-POOL zmig_fg.\n",
+      "dependencies": [
+        "ZMIG_FM_STATUS"
+      ]
+    },
+    {
+      "name": "ZMIG_FM_STATUS",
+      "type": "FUGR/FF",
+      "package": "ZMIGFIX_TEST",
+      "source": "FUNCTION zmig_fm_status.\n  DATA lv_gbstk TYPE c LENGTH 1.\n  SELECT SINGLE gbstk FROM vbuk INTO lv_gbstk WHERE vbeln = '0000000001'.\nENDFUNCTION.\n",
+      "mainProgram": "ZMIG_FG"
+    },
+    {
+      "name": "ZMIG_LOCKED",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmig_locked.\nDATA lt_konv TYPE TABLE OF konv.\nSELECT * FROM konv INTO TABLE lt_konv UP TO 1 ROWS.\n",
+      "lockedBy": "OUTRO_USR"
+    },
+    {
+      "name": "ZMIG_IN_OTHER_REQ",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmig_in_other_req.\nDATA lv_gbstk TYPE c LENGTH 1.\nSELECT SINGLE gbstk FROM vbuk INTO lv_gbstk WHERE vbeln = '1'.\n",
+      "openRequest": "SBXK900200"
+    },
+    {
+      "name": "RV_STANDARD_KONV",
+      "type": "PROG/P",
+      "package": "VKON",
+      "source": "REPORT rv_standard_konv.\nSELECT * FROM konv INTO TABLE @DATA(lt) UP TO 1 ROWS.\n"
+    },
+    {
+      "name": "YMIG_LEGACY",
+      "type": "PROG/P",
+      "package": "YMIGFIX_LEGACY",
+      "source": "REPORT ymig_legacy.\nDATA lt_bseg TYPE TABLE OF bseg.\nSELECT * FROM bseg INTO TABLE lt_bseg UP TO 1 ROWS.\nDATA lt_vbuk TYPE TABLE OF vbuk.\nSELECT * FROM vbuk INTO TABLE lt_vbuk UP TO 1 ROWS.\n"
+    },
+    {
+      "name": "ZSD_LEGACY_REPORT",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zsd_legacy_report.\nDATA lv_gbstk TYPE c LENGTH 1.\nSELECT SINGLE gbstk FROM vbuk INTO lv_gbstk WHERE vbeln = '1'.\n"
+    },
+    {
+      "name": "ZMM_OLD_INTERFACE",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmm_old_interface.\nDATA lt_konv TYPE TABLE OF konv.\n"
+    },
+    {
+      "name": "ZMIG_STD_INCL",
+      "type": "PROG/P",
+      "package": "ZMIGFIX_TEST",
+      "source": "REPORT zmig_std_incl.\nINCLUDE mstdinc01.\nWRITE: / 'x'.\n",
+      "dependencies": [
+        "MSTDINC01"
+      ]
+    },
+    {
+      "name": "MSTDINC01",
+      "type": "PROG/I",
+      "package": "SAPSTD",
+      "source": "DATA gt_std TYPE TABLE OF konv.\n",
+      "mainProgram": "ZMIG_STD_INCL"
+    }
+  ],
+  "requests": [
+    {
+      "number": "SBXK900120",
+      "description": "MigFix - correções (simulado)",
+      "type": "Workbench",
+      "modifiable": true,
+      "owner": "MIGFIX"
+    },
+    {
+      "number": "SBXK900121",
+      "description": "MigFix - backup (simulado)",
+      "type": "Workbench",
+      "modifiable": true,
+      "owner": "MIGFIX"
+    },
+    {
+      "number": "SBXK900099",
+      "description": "Request liberada (simulado)",
+      "type": "Workbench",
+      "modifiable": false,
+      "owner": "MIGFIX"
+    },
+    {
+      "number": "SBXK900130",
+      "description": "Customizing (simulado)",
+      "type": "Customizing",
+      "modifiable": true,
+      "owner": "MIGFIX"
+    },
+    {
+      "number": "SBXK900200",
+      "description": "Outra equipe (simulado)",
+      "type": "Workbench",
+      "modifiable": true,
+      "owner": "OUTRO_USR"
+    }
+  ],
+  "syntaxRules": [
+    {
+      "pattern": " konv",
+      "message": "KONV is not a table in S/4HANA. Use PRCD_ELEMENTS.",
+      "code": "MIG_KONV"
+    },
+    {
+      "pattern": " vbuk",
+      "message": "VBUK does not exist in S/4HANA. Status fields moved to VBAK/LIKP.",
+      "code": "MIG_VBUK"
+    },
+    {
+      "pattern": " vbup",
+      "message": "VBUP does not exist in S/4HANA. Status fields moved to VBAP/LIPS.",
+      "code": "MIG_VBUP"
+    },
+    {
+      "pattern": " s032",
+      "message": "LIS table S032 was removed in S/4HANA.",
+      "code": "MIG_S032"
+    }
+  ],
+  "atcRules": [
+    {
+      "pattern": "from bseg",
+      "message": "S/4HANA simplification: BSEG is replaced by ACDOCA for reporting.",
+      "check": "S/4HANA Readiness",
+      "priority": 2
+    },
+    {
+      "pattern": "from mkpf",
+      "message": "S/4HANA simplification: MKPF/MSEG are replaced by MATDOC.",
+      "check": "S/4HANA Readiness",
+      "priority": 2
+    },
+    {
+      "pattern": "lv_matnr(18)",
+      "message": "Material number field length extended to 40 characters.",
+      "check": "S/4HANA Field Length Extension",
+      "priority": 1
+    },
+    {
+      "pattern": "select * from",
+      "message": "SELECT * reads all columns; select only the fields used.",
+      "check": "Performance",
+      "priority": 3
+    }
+  ],
+  "atcRuns": [
+    {
+      "id": "ATC-SIM-001",
+      "title": "ATC S/4HANA Readiness (simulado)",
+      "createdAt": "2026-10-20T12:00:00+00:00"
+    }
+  ]
+}

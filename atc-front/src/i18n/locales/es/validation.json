@@ -1,0 +1,8 @@
+{
+  "email": "Correo inválido.",
+  "format": "Formato inválido.",
+  "invalid": "Valor inválido.",
+  "required": "Obligatorio.",
+  "tooBig": "Máximo: {{maximum}}.",
+  "tooSmall": "Mínimo: {{minimum}}."
+}

@@ -1,0 +1,22 @@
+* linha 1
+* linha 2
+* linha 3
+* linha 4
+* linha 5
+SELECT * FROM konv INTO TABLE lt_konv WHERE knumv = lv_k.
+WRITE 0.
+WRITE 1.
+WRITE 2.
+*>>> S/4 MIGRATION MIG-NOW - START OF DELETION - 06.11.2026 AUT-ML
+*WRITE 3.
+*WRITE 4.
+*<<< S/4 MIGRATION MIG-NOW - END OF DELETION - 06.11.2026 AUT-ML
+WRITE 5.
+WRITE 6.
+WRITE 7.
+WRITE 8.
+WRITE 9.
+CALL FUNCTION 'BAPI_X'
+  EXPORTING
+    material = lv_m.
+ENDFORM.

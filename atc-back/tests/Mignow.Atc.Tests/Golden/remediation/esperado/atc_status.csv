@@ -1,0 +1,16 @@
+﻿Priority;Check Title;Check Message;Object name;Obj.;Exemption State;Contact;Package;1st Found;Obj. Resp.;Changed by;Note;Short Text;Component;RObT;Referenced Object;Additional Info;Category;Category7;Text;Remarks;Finding ID;Status Remediação
+1;S4HANA Conversion;"Pricing konv; usado ""direto""";ZPROG_A;PROG;;;ZPKG;;;;2220005;Tabela KONV;;TABL;KONV;;;;Technical;;F1;
+1;S4HANA Conversion;Uso de BKPF;ZPROG_B;PROG;;;ZPKG;;;;2220006;Tabela;;TABL;VBUK;;;;Technical;;F2;Confirmado KB
+1;S4HANA Conversion;Uso de MKPF;ZPROG_C;PROG;;;ZPKG;;;;2220007;Tabela;;TABL;MKPF;;;;Technical;;F3;
+1;Transacao;Transacao ME53;ZPROG_D;PROG;;;ZPKG;;;;1234;Transacao;;TRAN;ME53;;;;Technical;;F4;
+1;Material Number Field Length Extension;Material number field length extension;ZPROG_E;PROG;;;ZPKG;;;;2438131;Material Number Field Length Extension;;FUNC;BAPI_MATERIAL_SAVEDATA;;;;Technical;;F5;Isenção
+1;Standard;Modificacao;SAPMV45A;PROG;;;SAP;;;;2220005;Tabela;;TABL;KONV;;;;Technical;;F6;
+1;S4HANA Conversion;"BSEG; removido";ZPROG_F;PROG;;;ZPKG;;;;2227;Tabela BSEG;;TABL;BSEG;;;;Technical;;F7;Isenção
+2;Search for Database Operations;DB Operation MODIFY found;ZPROG_G;PROG;;;ZPKG;;;;;Tabela;;TABL;VBAK;;;;Technical;;F8;Isenção
+1;S4HANA Conversion;Estrutura;ZTABLE_H;TABL;;;ZPKG;;;;2220005;Tabela;;TABL;MARA;;;;Ambiguous;;F9;Cancelado
+1;S4HANA Conversion;Produto;ZGFSCM_MIG_CREDITO;PROG;;;ZPKG;;;;2220005;Tabela;;TABL;KNA1;;;;Technical;;F10;Cancelado
+1;Upgrade;KNKK;ZPROG_I;PROG;;;ZPKG;;;;2220005;Tabela;;TABL;KNKK;;;;Technical;;F11;
+3;S4HANA Conversion;Fora do escopo;ZPROG_X;PROG;;;ZPKG;;;;1;Tabela;;TABL;MARD;;;;Technical;;F12;
+1;S4HANA Conversion;FM;ZPROG_J;PROG;;;ZPKG;;;;2220005;FM;;FUNC;ZFM_X;;;;Technical;;F13;
+1;S4HANA Conversion;KONV de novo;ZPROG_K;PROG;;;ZPKG;;;;2220005;Tabela;;TABL;KONV;;;;Technical;;F14;
+1;S4HANA Conversion;Deslocado;ZPROG_L;PROG;;;ZPKG;;;;2220005;Short;TABL;MARD;;;;;Technical;;F15;

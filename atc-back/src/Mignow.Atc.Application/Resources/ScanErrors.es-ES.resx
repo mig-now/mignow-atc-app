@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <!-- Marcador do módulo Scan: chaves <Código> só deste módulo, nos 3 idiomas (procuradas pelo ErrorText). -->
+  <data name="Scan.NotFound" xml:space="preserve"><value>Escaneo no encontrado.</value></data>
+  <data name="Scan.RulesNotFound" xml:space="preserve"><value>Archivo de reglas MIGNOW no encontrado ({0}).</value></data>
+  <data name="Scan.NoExtraction" xml:space="preserve"><value>El ambiente no tiene extracción de ATC para cruzar. Extraiga los findings de ATC antes.</value></data>
+  <data name="Scan.NoInventory" xml:space="preserve"><value>Ejecute el inventario antes (aún no hay lotes).</value></data>
+  <data name="Scan.NotCrossed" xml:space="preserve"><value>El escaneo aún no se cruzó con ATC.</value></data>
+  <data name="Scan.NothingToImport" xml:space="preserve"><value>El CSV P1 no tiene líneas para importar.</value></data>
+  <data name="Scan.NoRulesSelected" xml:space="preserve"><value>Seleccione al menos una regla.</value></data>
+  <data name="Scan.UnknownRule" xml:space="preserve"><value>Regla(s) desconocida(s): {0}.</value></data>
+  <data name="Scan.InvalidLots" xml:space="preserve"><value>Lotes con formato 1, 2-9 o 1,3.</value></data>
+  <data name="Scan.InvalidParallel" xml:space="preserve"><value>Paralelismo entre 1 y 9.</value></data>
+  <data name="Scan.InvalidCross" xml:space="preserve"><value>Clase de cruce inválida.</value></data>
+  <data name="Scan.InvalidStatus" xml:space="preserve"><value>Situación debe ser P, R o I.</value></data>
+  <data name="Scan.SimulationFailed" xml:space="preserve"><value>La simulación encontró problemas: nada se grabó. Vea el resultado de la ejecución.</value></data>
+  <data name="Scan.SimulationOk" xml:space="preserve"><value>Simulación OK (nada grabado).</value></data>
+  <data name="Scan.ChecksOk" xml:space="preserve"><value>Verificaciones OK: el mandante acepta las clases temporales.</value></data>
+  <data name="Scan.ClassExists" xml:space="preserve"><value>Ya existe una clase temporal en el sistema (residuo). Ejecute la eliminación de residuos antes.</value></data>
+  <data name="Scan.ClassNotRemoved" xml:space="preserve"><value>Clase(s) temporal(es) no eliminada(s) de $TMP: ejecute la eliminación de residuos o bórrelas en SE24/Eclipse.</value></data>
+  <data name="Scan.LotsFailed" xml:space="preserve"><value>Algunos lotes fallaron. Corrija la causa y reprocese (los lotes concluidos se mantienen).</value></data>
+  <data name="Scan.NoPendingLots" xml:space="preserve"><value>Ningún lote pendiente.</value></data>
+  <data name="Scan.CalibrationSkipped" xml:space="preserve"><value>Calibración omitida (el lote 1 no está pendiente).</value></data>
+  <data name="Scan.CalibrationDone" xml:space="preserve"><value>Lote de calibración concluido.</value></data>
+  <data name="Scan.CrossSkippedLotsMissing" xml:space="preserve"><value>Cruce con ATC no realizado: hay lotes sin salida completa.</value></data>
+  <data name="Scan.LotDone" xml:space="preserve"><value>Lote concluido.</value></data>
+  <data name="Scan.LotFailed" xml:space="preserve"><value>Lote con error.</value></data>
+  <data name="Scan.InventoryDone" xml:space="preserve"><value>Inventario concluido.</value></data>
+  <data name="Scan.CrossDone" xml:space="preserve"><value>Cruce con ATC concluido.</value></data>
+  <data name="Scan.CleanupDone" xml:space="preserve"><value>Clases residuales eliminadas.</value></data>
+</root>
